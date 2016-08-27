@@ -1,0 +1,12 @@
+
+
+
+# Do not adjust line endings on Sitecore .item files
+*.item -text
+
+# *.aspx -text eol=crlf
+# *.ascx -text eol=crlf
+# *.css -text eol=lf
+# *.scss -text eol=lf
+# *.js -text eol=lf
+*.tt -text eol=crlf
