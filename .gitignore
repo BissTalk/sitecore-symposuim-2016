@@ -272,3 +272,6 @@ BuiltFiles_*.txt
 # npm
 npm-debug.log
 
+# Installer artifacts
+ToHarvestAssemblies/
+patch-catalog.txt

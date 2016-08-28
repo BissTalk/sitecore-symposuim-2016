@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="EFDFC1BB-AD13-442C-A882-D98A5CA2C5D7"
+           Name="Bissol Web Common Components"
+           Language="1033" 
+           Version="1.0.0.0"
+           Manufacturer="Bissol"
+           UpgradeCode="2FC5531A-EA9E-4A20-9B52-ADF54DDCB3D2"
+    >
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
+    <InstanceTransforms Property="INSTANCEID">
+      <Instance Id="I1" ProductCode="4F2EC892-0700-4A51-A3C0-DBB8D19EA7F4"
+                UpgradeCode="FEA18AC2-4173-4AEF-9FCD-49EA90ECC303" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I2" ProductCode="13D5F4E6-515C-4F4D-84A3-D8761242F524"
+          UpgradeCode="FA418E73-8DB1-4BC7-9E2D-0A36273CDBF6" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I3" ProductCode="8BAEE508-EBF2-47F8-AC9A-7C27255A471E"
+                UpgradeCode="032088E8-C148-41EF-AF95-D8508703ADAB" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I4" ProductCode="28013C17-0E16-41C9-9483-9F13616339D6"
+                UpgradeCode="508BFE63-FF8F-41F5-AC15-AE4D05A4ABC2" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I5" ProductCode="BF342D51-971B-422D-AF2B-2B953AAB3C6B"
+                UpgradeCode="68E2CE17-48E3-4A9E-989E-13208AA0F3FE" ProductName="[PRODUCT_NAME]" />
+    </InstanceTransforms>
+    <MediaTemplate EmbedCab="yes" />
+
+    <CustomAction Id="SetProductName"
+              Property="ProductName"
+              Value="[PRODUCT_NAME]" />
+
+
+    <InstallExecuteSequence>
+      <Custom Action="SetProductName" Before="LaunchConditions" />
+    </InstallExecuteSequence>
+
+    <Property Id="INSTANCEID" Value="I0" />
+    <Property Id='PRODUCT_NAME' Value='Bissol Web Common Components' />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+		<Feature Id="ProductFeature" Title="Setup" Level="1">
+      <ComponentGroupRef Id="Core.Binaries" />
+			<ComponentGroupRef Id="Web.Content" />
+      <ComponentGroupRef Id="Web.Binaries" />
+      <ComponentGroupRef Id="Dependencies" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER" Name="webdir">
+        <Directory Id="BIN" Name="bin" />
+      </Directory>
+		</Directory>
+	</Fragment>
+</Wix>
