@@ -34,6 +34,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests.Functional", "
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Setup", "Setup\Setup.wixproj", "{2F3E7587-1E8D-4611-918A-2A5C2F3FFA3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Settings", ".Settings", "{F54D539D-C44F-462C-9F6C-6E134A77B4E7}"
+	ProjectSection(SolutionItems) = preProject
+		Bissol.SymDemo.Common.sln.DotSettings = Bissol.SymDemo.Common.sln.DotSettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
