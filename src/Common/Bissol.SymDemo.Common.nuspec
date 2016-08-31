@@ -13,8 +13,8 @@
     <tags></tags>
   </metadata>
   <files>
-    <file src="\Setup\bin\Release\*.msi" target="Nuget"/>
-    <file src="\Setup\Patch-Catalog.txt" target="Nuget"/>
+    <file src="Setup\bin\Release\*.msi" target="Nuget"/>
+    <file src="Setup\Patch-Catalog.txt" target="Nuget"/>
   </files>
 
 </package>
