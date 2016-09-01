@@ -76,13 +76,71 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Steps
         }
 
         /// <summary>
-        ///     Verifies the launch pad page was loaded.
+        ///     Verifies the LaunchPad page was loaded.
         /// </summary>
-        [Then(@"I should be on to the LaunchPad page"), UsedImplicitly]
-        public void ThenIShouldGetRediretedToTheLaunchPadPage()
+        [Then(@"I should be on the LaunchPad page"), UsedImplicitly]
+        public void VerifyLaunchPadPage()
         {
             Context.VerifyPage<Launchpad>()
                 .TakeScreenshot("sitecore-launchpad.jpg", ImageFormat.Jpeg);
+        }
+
+        /// <summary>
+        ///     Given the I am on the LaunchPad page.
+        /// </summary>
+        [Given(@"I am on the LaunchPad Page"), UsedImplicitly]
+        public void GivenIAmOnTheLaunchPadPage()
+        {
+            Context.VerifyPage<Launchpad>();
+        }
+
+        /// <summary>
+        ///     When I click the LaunchPad Experience Edior link.
+        /// </summary>
+        [When(@"I click the Experience Editor link on the LaunchPad"), UsedImplicitly]
+        public void ClickLaunchPadExperienceEditorLink()
+        {
+            Context.LoadPage<Launchpad>()
+                .ClickExperienceEditorLink();
+        }
+
+        /// <summary>
+        ///     When I click the LaunchPad Experience Edior link.
+        /// </summary>
+        [When(@"I click the Content Editor link on the LaunchPad"), UsedImplicitly]
+        public void ClickLaunchPadContentEditorLink()
+        {
+            Context.LoadPage<Launchpad>()
+                .ClickContentEditorLink();
+        }
+
+        /// <summary>
+        ///     Verifies the Experience Editor page was loaded.
+        /// </summary>
+        [Then(@"I should be on the Experience Editor page"), UsedImplicitly]
+        public void VerifyExperienceEditorPage()
+        {
+            Context.VerifyPage<ExperienceEditor>()
+                .TakeScreenshot("sitecore-experience-editor.jpg", ImageFormat.Jpeg);
+        }
+
+        /// <summary>
+        ///     When I click the LaunchPad Experience Edior link.
+        /// </summary>
+        [When(@"I navigate to the LaunchPad"), UsedImplicitly]
+        public void NavigateToLaunchPad()
+        {
+            Context.GoToPage<Launchpad>();
+        }
+
+        /// <summary>
+        ///     Verifies the Experience Editor page was loaded.
+        /// </summary>
+        [Then(@"I should be on the Content Editor page"), UsedImplicitly]
+        public void VerifyContentEditorPage()
+        {
+            Context.VerifyPage<ContentEditor>()
+                .TakeScreenshot("sitecore-content-editor.jpg", ImageFormat.Jpeg);
         }
     }
 }

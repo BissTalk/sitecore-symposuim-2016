@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
+using System.IO;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
@@ -96,7 +97,7 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Pages
         public T TakeScreenshot([NotNull] string fileName, ImageFormat format)
         {
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
-            TakeScreenshot().SaveAsFile(fileName, format);
+            TakeScreenshot().SaveAsFile($"{WebDriverExtensions.Settings.TestResultsFolder}\\{fileName}", format);
             return (T) this;
         }
 
@@ -131,8 +132,35 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Pages
         [NotNull]
         public virtual T GoTo()
         {
-            WebDriver.GoTo(RelativePath);
+            WebDriver.GoTo(RelativePath)
+                .VerifyPage<T>();
             return (T) this;
+        }
+
+        /// <summary>
+        ///     Goes to the page.
+        /// </summary>
+        /// <typeparam name="TPage">The type of the Page.</typeparam>
+        /// <returns>
+        ///     This the new page.
+        /// </returns>
+        [NotNull]
+        public virtual TPage GoToPage<TPage>() where TPage : BasePage<TPage>
+        {
+            return WebDriver.GoToPage<TPage>();
+        }
+
+        /// <summary>
+        ///     Verifies the page was loaded.
+        /// </summary>
+        /// <typeparam name="TPage">The type of the Page.</typeparam>
+        /// <returns>
+        ///     This the new page.
+        /// </returns>
+        [NotNull]
+        public virtual TPage VerifyPage<TPage>() where TPage : BasePage<TPage>
+        {
+            return WebDriver.VerifyPage<TPage>();
         }
     }
 }

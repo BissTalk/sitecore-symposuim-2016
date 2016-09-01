@@ -19,7 +19,7 @@ namespace Bissol.SymDemo.Common.Tests.Functional
         ///     The settings.
         /// </value>
         [NotNull]
-        private static ApplicationSettings Settings => ApplicationSettings.Default ?? new ApplicationSettings();
+        internal static ApplicationSettings Settings => ApplicationSettings.Default ?? new ApplicationSettings();
 
         /// <summary>
         ///     Navagates the web driver to the given URL.

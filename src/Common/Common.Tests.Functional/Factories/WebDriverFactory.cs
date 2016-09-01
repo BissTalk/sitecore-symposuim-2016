@@ -15,13 +15,14 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Factories
         /// <summary>
         ///     The Lookup the correct factory method by driver name.
         /// </summary>
-        [NotNull] private static readonly IDictionary<string, Func<IWebDriver>> _funcs = 
+        [NotNull]
+        private static readonly IDictionary<string, Func<IWebDriver>> _funcs =
             new Dictionary<string, Func<IWebDriver>>
-        {
-            {"chrome", () => new ChromeDriver(new ChromeOptions {LeaveBrowserRunning = false})},
-            {"phantomjs", () => new PhantomJSDriver()},
-            {"phantom", () => new PhantomJSDriver()}
-        };
+            {
+                {"chrome", () => new ChromeDriver(new ChromeOptions {LeaveBrowserRunning = false})},
+                {"phantomjs", () => new PhantomJSDriver()},
+                {"phantom", () => new PhantomJSDriver()}
+            };
 
         /// <summary>
         ///     Creates an instance of the Selenium web driver.

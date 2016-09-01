@@ -65,18 +65,46 @@ namespace Bissol.SymDemo.Common.Tests.Functional
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sitecore Login", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Sitecore login", new string[] {
                 "smoke"}, SourceLine=7)]
         public virtual void SitecoreLogin()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sitecore Login", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sitecore login", new string[] {
                         "smoke"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.When("I login to Sitecore as an admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then("I should be on to the LaunchPad page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should be on the LaunchPad page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.Given("I am on the LaunchPad Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Content Editor pages come up without error", new string[] {
+                "smoke"}, SourceLine=14)]
+        public virtual void ContentEditorPagesComeUpWithoutError()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Content Editor pages come up without error", new string[] {
+                        "smoke"});
+#line 15
+this.ScenarioSetup(scenarioInfo);
+#line 16
+ testRunner.When("I login to Sitecore as an admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+ testRunner.And("I navigate to the LaunchPad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+ testRunner.And("I click the Experience Editor link on the LaunchPad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.Then("I should be on the Experience Editor page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+ testRunner.When("I navigate to the LaunchPad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+ testRunner.And("I click the Content Editor link on the LaunchPad", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.Then("I should be on the Content Editor page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
