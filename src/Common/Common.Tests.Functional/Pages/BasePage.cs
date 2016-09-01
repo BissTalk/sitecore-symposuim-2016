@@ -97,6 +97,8 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Pages
         public T TakeScreenshot([NotNull] string fileName, ImageFormat format)
         {
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
+            if(!Directory.Exists(WebDriverExtensions.Settings.TestResultsFolder))
+                Directory.CreateDirectory(WebDriverExtensions.Settings.TestResultsFolder);
             TakeScreenshot().SaveAsFile($"{WebDriverExtensions.Settings.TestResultsFolder}\\{fileName}", format);
             return (T) this;
         }

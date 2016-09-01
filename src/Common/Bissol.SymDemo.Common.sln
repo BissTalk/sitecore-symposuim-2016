@@ -28,9 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{4B923F16-F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functional", "Functional", "{404EFBDF-D55D-442A-8158-80C0CE84E5C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Tests.Unit", "Core.Tests.Unit\Core.Tests.Unit.csproj", "{E0E92FB7-9789-495D-AF64-C7987618949E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bissol.SymDemo.Core.Tests.Unit", "Core.Tests.Unit\Bissol.SymDemo.Core.Tests.Unit.csproj", "{E0E92FB7-9789-495D-AF64-C7987618949E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests.Functional", "Common.Tests.Functional\Common.Tests.Functional.csproj", "{851E6ABE-9388-47F0-9746-5C7DB52FD6AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bissol.SymDemo.Common.Tests.Functional", "Common.Tests.Functional\Bissol.SymDemo.Common.Tests.Functional.csproj", "{851E6ABE-9388-47F0-9746-5C7DB52FD6AB}"
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Setup", "Setup\Setup.wixproj", "{2F3E7587-1E8D-4611-918A-2A5C2F3FFA3C}"
 EndProject

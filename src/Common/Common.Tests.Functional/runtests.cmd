@@ -1,6 +1,6 @@
 @pushd %~dp0
 
-%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe "Common.Tests.Functional.csproj"
+%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe "Bissol.SymDemo.Common.Tests.Functional.csproj"
 
 @if ERRORLEVEL 1 goto end
 
