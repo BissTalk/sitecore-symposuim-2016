@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Comcast.Platform.Demo.Content</id>
+    <id>Bissol.SymDemo.Common.Content</id>
     <version>1.0.0.0</version>
     <title>Bissol Symposium Demo Common Component Content</title>
     <authors>Joe Bissol</authors>
