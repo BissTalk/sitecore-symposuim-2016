@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Version.wxi ?>
   <Product Id="EFDFC1BB-AD13-442C-A882-D98A5CA2C5D7"
            Name="Bissol Web Common Components"
            Language="1033" 
-           Version="1.0.0.0"
+           Version="$(var.Version)"
            Manufacturer="Bissol"
            UpgradeCode="2FC5531A-EA9E-4A20-9B52-ADF54DDCB3D2"
     >

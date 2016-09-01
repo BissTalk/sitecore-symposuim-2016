@@ -53,6 +53,7 @@
     <Content Include="CSProjectReader.exe.config" />
     <Content Include="CSProjectReader.exe.config.sample" />
     <Content Include="QueryMSIPackageContents.exe" />
+    <Content Include="Version.wxi" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Target Name="BeforeBuild">
