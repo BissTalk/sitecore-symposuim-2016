@@ -125,7 +125,8 @@ namespace SymDemo.UnityContainerManager
         /// </summary>
         public void RemoveAll()
         {
-            _lookup.Keys.ForEach(Remove);
+            var keys = _lookup.Keys.ToArray();
+            keys.ForEach(Remove);
         }
 
         /// <summary>
