@@ -22,7 +22,7 @@
     <RootNamespace>Content.Master</RootNamespace>
     <ManageRoles>False</ManageRoles>
     <SitecoreDatabase>master</SitecoreDatabase>
-    <AssemblyStatus>Include</AssemblyStatus>
+    <AssemblyStatus>Exclude</AssemblyStatus>
     <EnableCodeGeneration>True</EnableCodeGeneration>
     <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
     <CodeGenTargetProject>SymDemo.Common.Models</CodeGenTargetProject>
@@ -212,7 +212,8 @@
     <CodeGenTemplate Include="Code Generation Templates\stringextensions.tt" />
   </ItemGroup>
   <ItemGroup>
-    <ExcludedAssemblies Include="Bissol.%2a" />
+    <ExcludedAssemblies Include="NewtonSoft%2a.dll" />
+    <ExcludedAssemblies Include="Sitecore%2a.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>

@@ -8,7 +8,7 @@ namespace SymDemo.Pipeline.DependencyInjection
     /// </summary>
     public class StartUpUnityContainerManagerInitialization
     {
-        private const string DefaultIocConfigurationTagName = "IocBootstrap";
+        private const string IOC_BOOTSTRAPPER_PIPELINE_NAME = "IocBootstrap";
 
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace SymDemo.Pipeline.DependencyInjection
             var containerManager = UnityContainerManager.UnityContainerManager.Instance;
             var container = containerManager?.Get();
             var newArgs = new IocContainerArgs(container);
-            CorePipeline.Run(DefaultIocConfigurationTagName, newArgs, false);
+            CorePipeline.Run(IOC_BOOTSTRAPPER_PIPELINE_NAME, newArgs, false);
             CopyOutputAgrsDataToInputArgs(args, newArgs);
         }
 

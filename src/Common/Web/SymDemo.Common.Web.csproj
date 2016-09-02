@@ -81,8 +81,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\zzz.SynDemoCommon\GlobalIoCBootstraper.config" />
+    <Content Include="App_Config\Include\zzz.SynDemoCommon\IocBootstrap.config.example" />
     <None Include="packages.config" />
-    <Content Include="App_Config\Include\Bissol.Common\ItemWebApi.config" />
+    <Content Include="App_Config\Include\zzz.SynDemoCommon\ItemWebApi.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
