@@ -4,17 +4,22 @@ using Unity.WebApi;
 
 namespace SymDemo
 {
+    /// <summary>
+    ///     Configures the Unity IoC for Dependency Injection.
+    /// </summary>
     public static class UnityConfig
     {
+        /// <summary>
+        /// Registers the components.
+        /// </summary>
+        /// <example>
+        /// 
+        /// container.RegisterType&lt;ITestService, TestService&gt;();
+        /// 
+        /// </example>
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
-            
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
-            
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

@@ -77,6 +77,7 @@ namespace SymDemo.DependencyInjection
         /// </summary>
         public void Dispose()
         {
+            // There is no cleanup needed here.
         }
 
         /// <summary>
