@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Bissol.SymDemo.Common.Tests.Functional
+namespace SymDemo.Common.Tests.Functional
 {
     using TechTalk.SpecFlow;
     

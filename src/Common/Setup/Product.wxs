@@ -39,9 +39,10 @@
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 
 		<Feature Id="ProductFeature" Title="Setup" Level="1">
-      <ComponentGroupRef Id="Core.Binaries" />
-			<ComponentGroupRef Id="Web.Content" />
-      <ComponentGroupRef Id="Web.Binaries" />
+      <ComponentGroupRef Id="SymDemo.Core.Binaries" />
+			<ComponentGroupRef Id="SymDemo.Common.Web.Content" />
+      <ComponentGroupRef Id="SymDemo.Common.Web.Binaries" />
+      <ComponentGroupRef Id="SymDemo.UnityContainerManager.Binaries" />
       <ComponentGroupRef Id="Dependencies" />
 		</Feature>
 	</Product>

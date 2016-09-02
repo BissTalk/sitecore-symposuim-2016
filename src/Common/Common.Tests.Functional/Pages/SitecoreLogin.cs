@@ -7,13 +7,13 @@ using OpenQA.Selenium.Support.PageObjects;
 
 #pragma warning disable 649
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Pages
+namespace SymDemo.Common.Tests.Functional.Pages
 {
     /// <summary>
     ///     Object representation of the Sitecore login page.
     /// </summary>
     /// <seealso
-    ///     cref="Bissol.SymDemo.Common.Tests.Functional.Pages.BasePage{Bissol.SymDemo.Common.Tests.Functional.Pages.SitecoreLoginPage}" />
+    ///     cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.SitecoreLoginPage}" />
     public class SitecoreLogin : BasePage<SitecoreLogin>
     {
         /// <summary>

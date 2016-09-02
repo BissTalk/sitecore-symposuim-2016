@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.PhantomJS;
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Factories
+namespace SymDemo.Common.Tests.Functional.Factories
 {
     /// <summary>
     ///     Static factory for creating instances of Selenium web drivers.

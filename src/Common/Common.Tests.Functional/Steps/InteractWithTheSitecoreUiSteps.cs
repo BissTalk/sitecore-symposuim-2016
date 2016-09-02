@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Bissol.SymDemo.Common.Tests.Functional.Factories;
-using Bissol.SymDemo.Common.Tests.Functional.Pages;
-using Bissol.SymDemo.Common.Tests.Functional.Settings;
+using SymDemo.Common.Tests.Functional.Settings;
 using JetBrains.Annotations;
+using SymDemo.Common.Tests.Functional.Factories;
+using SymDemo.Common.Tests.Functional.Pages;
 using TechTalk.SpecFlow;
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Steps
+namespace SymDemo.Common.Tests.Functional.Steps
 {
     /// <summary>
     ///     Step definision methods for supporting test cases for interacting with the Sitecore web UI.

@@ -8,8 +8,8 @@
     <ProjectGuid>69269c5c-6ffe-4c24-acb7-b98110abf22f</ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <SourceWebPhysicalPath>..\Web</SourceWebPhysicalPath>
-    <SourceWebProject>{1e799f7e-a83a-4561-8420-d2eedf8f900b}|Web\Web.csproj</SourceWebProject>
-    <SourceWebVirtualPath>/Web.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{1e799f7e-a83a-4561-8420-d2eedf8f900b}|Web\SymDemo.Common.Web.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/SymDemo.Common.Web.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
     <UseMerge>true</UseMerge>
@@ -23,6 +23,13 @@
     <ManageRoles>False</ManageRoles>
     <SitecoreDatabase>master</SitecoreDatabase>
     <AssemblyStatus>Include</AssemblyStatus>
+    <EnableCodeGeneration>True</EnableCodeGeneration>
+    <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
+    <CodeGenTargetProject>SymDemo.Common.Models</CodeGenTargetProject>
+    <CodeGenFile>Models.Generated.cs</CodeGenFile>
+    <BaseNamespace>SymDemo.Common.Models</BaseNamespace>
+    <BaseTransformFile />
+    <HeaderTransformFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,9 +64,9 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Web\Web.csproj">
+    <ProjectReference Include="..\Web\SymDemo.Common.Web.csproj">
       <Project>{1e799f7e-a83a-4561-8420-d2eedf8f900b}</Project>
-      <Name>Web</Name>
+      <Name>SymDemo.Common.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +86,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Controllers\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Controllers\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -95,7 +102,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Layouts\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Layouts\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -107,7 +114,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Models\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Models\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -119,7 +126,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Placeholder Settings\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -131,7 +138,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Renderings\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -147,7 +154,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Sublayouts\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\layout\Sublayouts\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -159,7 +166,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\media library\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\media library\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -183,7 +190,7 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
@@ -191,10 +198,18 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\SymDemo\Shared.item">
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeGenTemplate Include="Code Generation Templates\generalextensions.tt" />
+    <CodeGenTemplate Include="Code Generation Templates\glassv4header.tt" />
+    <CodeGenTemplate Include="Code Generation Templates\glassv4item.tt" />
+    <CodeGenTemplate Include="Code Generation Templates\helpers.tt" />
+    <CodeGenTemplate Include="Code Generation Templates\inflector.tt" />
+    <CodeGenTemplate Include="Code Generation Templates\stringextensions.tt" />
   </ItemGroup>
   <ItemGroup>
     <ExcludedAssemblies Include="Bissol.%2a" />

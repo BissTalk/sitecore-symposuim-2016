@@ -17,10 +17,17 @@ key: __icon
 content-length: 25
 
 apps/32x32/magic-cube.png
+----field----
+field: {9C6106EA-7A5A-48E2-8CAD-F0F693B1E2D4}
+name: __Read Only
+key: __read only
+content-length: 1
+
+1
 ----version----
 language: en
 version: 1
-revision: 02c593fc-34c9-4aec-9cd8-77e46ef4f873
+revision: e1d09d36-c440-419a-8792-5760eaeb42d2
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -35,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-02c593fc-34c9-4aec-9cd8-77e46ef4f873
+e1d09d36-c440-419a-8792-5760eaeb42d2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160831T230017Z
+20160901T232034Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

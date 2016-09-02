@@ -2,13 +2,13 @@
 using JetBrains.Annotations;
 using OpenQA.Selenium;
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Pages
+namespace SymDemo.Common.Tests.Functional.Pages
 {
     /// <summary>
     ///     The Sitecore Content Editor Page.
     /// </summary>
     /// <seealso
-    ///     cref="Bissol.SymDemo.Common.Tests.Functional.Pages.BasePage{Bissol.SymDemo.Common.Tests.Functional.Pages.ContentEditor}" />
+    ///     cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.ContentEditor}" />
     [UsedImplicitly]
     public class ContentEditor : BasePage<ContentEditor>
     {

@@ -8,7 +8,7 @@ using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Pages
+namespace SymDemo.Common.Tests.Functional.Pages
 {
     /// <summary>
     ///     The base page.
@@ -17,6 +17,11 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Pages
     public abstract class BasePage<T>
         where T : BasePage<T>
     {
+        /// <summary>
+        /// The default test results folder
+        /// </summary>
+        private const string DEFAULT_TEST_RESULTS_FOLDER = "TestResults";
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePage{T}" /> class.
         /// </summary>
@@ -97,9 +102,10 @@ namespace Bissol.SymDemo.Common.Tests.Functional.Pages
         public T TakeScreenshot([NotNull] string fileName, ImageFormat format)
         {
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
-            if(!Directory.Exists(WebDriverExtensions.Settings.TestResultsFolder))
-               Directory.CreateDirectory(WebDriverExtensions.Settings.TestResultsFolder);
-            TakeScreenshot().SaveAsFile($"{WebDriverExtensions.Settings.TestResultsFolder}\\{fileName}", format);
+            var folderName = WebDriverExtensions.Settings.TestResultsFolder ?? DEFAULT_TEST_RESULTS_FOLDER;
+            if(!Directory.Exists(folderName))
+               Directory.CreateDirectory(folderName);
+            TakeScreenshot().SaveAsFile($"{folderName}\\{fileName}", format);
             return (T) this;
         }
 

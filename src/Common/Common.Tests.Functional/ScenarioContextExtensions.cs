@@ -1,10 +1,10 @@
 ﻿using System;
-using Bissol.SymDemo.Common.Tests.Functional.Pages;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
+using SymDemo.Common.Tests.Functional.Pages;
 using TechTalk.SpecFlow;
 
-namespace Bissol.SymDemo.Common.Tests.Functional
+namespace SymDemo.Common.Tests.Functional
 {
     /// <summary>
     ///     Extension methods for <see cref="ScenarioContext" />.

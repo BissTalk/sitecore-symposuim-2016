@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Settings {
+namespace SymDemo.Common.Tests.Functional.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

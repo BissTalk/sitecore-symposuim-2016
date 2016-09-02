@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Bissol.SymDemo.Common.Tests.Functional.Pages;
+using SymDemo.Common.Tests.Functional.Pages;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;

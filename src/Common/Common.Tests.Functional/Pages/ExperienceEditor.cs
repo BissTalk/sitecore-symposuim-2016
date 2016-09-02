@@ -4,12 +4,12 @@ using JetBrains.Annotations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Bissol.SymDemo.Common.Tests.Functional.Pages
+namespace SymDemo.Common.Tests.Functional.Pages
 {
     /// <summary>
     ///     Sitecore Experience Editor Page (Formally know as Page Editor)
     /// </summary>
-    /// <seealso cref="Bissol.SymDemo.Common.Tests.Functional.Pages.BasePage{Bissol.SymDemo.Common.Tests.Functional.Pages.ExperienceEditor}" />
+    /// <seealso cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.ExperienceEditor}" />
     [UsedImplicitly]
     public class ExperienceEditor : BasePage<ExperienceEditor>
     {

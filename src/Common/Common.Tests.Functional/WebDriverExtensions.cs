@@ -1,11 +1,11 @@
 ﻿using System;
-using Bissol.SymDemo.Common.Tests.Functional.Pages;
-using Bissol.SymDemo.Common.Tests.Functional.Settings;
+using SymDemo.Common.Tests.Functional.Settings;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using SymDemo.Common.Tests.Functional.Pages;
 
-namespace Bissol.SymDemo.Common.Tests.Functional
+namespace SymDemo.Common.Tests.Functional
 {
     /// <summary>
     ///     Extension methods for Selenium's <see cref="IWebDriver" />.
