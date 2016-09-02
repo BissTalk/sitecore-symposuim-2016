@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Bissol.SymDemo.Common</id>
+    <id>SymDemo.Common</id>
     <version>1.0.0.0</version>
-    <title>Bissol Symposium Demo Common Component Installer</title>
+    <title>Symposium Demo Common Component Installer</title>
     <authors>Joe Bissol</authors>
     <owners>Joe Bissol</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

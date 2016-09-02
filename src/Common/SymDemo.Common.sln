@@ -34,7 +34,9 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SymDemo.Common.Setup", "Set
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Settings", ".Settings", "{F54D539D-C44F-462C-9F6C-6E134A77B4E7}"
 	ProjectSection(SolutionItems) = preProject
-		Bissol.SymDemo.Common.sln.DotSettings = Bissol.SymDemo.Common.sln.DotSettings
+		SymDemo.Common.Content.nuspec = SymDemo.Common.Content.nuspec
+		SymDemo.Common.nuspec = SymDemo.Common.nuspec
+		SymDemo.Common.sln.DotSettings = SymDemo.Common.sln.DotSettings
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymDemo.Common.Tests.Unit", "Common.Tests.Unit\SymDemo.Common.Tests.Unit.csproj", "{E0E92FB7-9789-495D-AF64-C7987618949E}"
