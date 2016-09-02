@@ -11,7 +11,7 @@ namespace SymDemo.UnityContainerManager.LifetimeManagers
     /// </summary>
     /// <seealso cref="System.Collections.Concurrent.ConcurrentDictionary{Guid,Object}" />
     /// <seealso cref="System.IDisposable" />
-    internal class SessionObjectStore : ConcurrentDictionary<Guid, object>
+    internal class SessionObjectStore : ConcurrentDictionary<Guid, object>, IDisposable
     {
         /// <summary>
         ///     The key for the item collection of the <see cref="HttpContext" />.
