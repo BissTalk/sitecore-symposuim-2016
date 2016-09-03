@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
@@ -108,11 +109,19 @@ namespace SymDemo.Common.Tests.Functional.Pages
         public T TakeScreenshot([NotNull] string fileName, ImageFormat format)
         {
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
-            var folderName = WebDriverExtensions.Settings.TestResultsFolder ?? DEFAULT_TEST_RESULTS_FOLDER;
-            if (!Directory.Exists(folderName))
-                Directory.CreateDirectory(folderName);
-            TakeScreenshot().SaveAsFile($"{folderName}\\{fileName}", format);
+            try
+            {
+                var folderName = WebDriverExtensions.Settings.TestResultsFolder ?? DEFAULT_TEST_RESULTS_FOLDER;
+                if (!Directory.Exists(folderName))
+                    Directory.CreateDirectory(folderName);
+                TakeScreenshot().SaveAsFile($"{folderName}\\{fileName}", format);
+            }
+            catch (ExternalException)
+            {
+                Console.WriteLine("WARNING: Failed to capture screenshot.");
+            }
             return (T) this;
+
         }
 
         /// <summary>
