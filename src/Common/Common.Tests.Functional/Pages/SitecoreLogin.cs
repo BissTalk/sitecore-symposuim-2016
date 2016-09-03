@@ -13,7 +13,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
     ///     Object representation of the Sitecore login page.
     /// </summary>
     /// <seealso
-    ///     cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.SitecoreLoginPage}" />
+    ///     cref="BasePage{T}" />
     public class SitecoreLogin : BasePage<SitecoreLogin>
     {
         /// <summary>

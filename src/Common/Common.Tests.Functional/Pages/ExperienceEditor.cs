@@ -9,7 +9,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
     /// <summary>
     ///     Sitecore Experience Editor Page (Formally know as Page Editor)
     /// </summary>
-    /// <seealso cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.ExperienceEditor}" />
+    /// <seealso cref="BasePage{T}" />
     [UsedImplicitly]
     public class ExperienceEditor : BasePage<ExperienceEditor>
     {

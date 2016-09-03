@@ -8,7 +8,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
     ///     The Sitecore Content Editor Page.
     /// </summary>
     /// <seealso
-    ///     cref="BasePage{T}.SymDemo.Common.Tests.Functional.Pages.ContentEditor}" />
+    ///     cref="BasePage{T}" />
     [UsedImplicitly]
     public class ContentEditor : BasePage<ContentEditor>
     {
