@@ -109,9 +109,9 @@
     <Compile Include="WebDriverExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Release.config">
+    <Content Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
-    </None>
+    </Content>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
