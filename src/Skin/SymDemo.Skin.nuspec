@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SymDemo.Common</id>
+    <version>1.0.0.0</version>
+    <title>Symposium Demo Skin Installer</title>
+    <authors>Joe Bissol</authors>
+    <owners>Joe Bissol</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Symposium Demo Skin Installer</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="Setup\bin\Release\*.msi" target="Nuget"/>
+    <file src="Setup\Patch-Catalog.txt" target="Nuget"/>
+  </files>
+
+</package>

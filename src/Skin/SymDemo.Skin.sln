@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymDemo.Skin.Web", "Web\SymDemo.Skin.Web.csproj", "{761CD701-1498-4886-B719-6D6D75756A57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Install", ".Install", "{265B3ADF-6754-40A6-BFAC-3DE5824A70D2}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SymDemo.Skin.Setup", "Setup\SymDemo.Skin.Setup.wixproj", "{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{309431E7-76AA-4EA2-982A-A28B64062CB9}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Content.Core", "Content.Core\Content.Core.scproj", "{C9D03A8B-4B93-4252-AD16-70621D1E4688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{FDF8AC45-FC35-4999-AC8F-4183D87A1563}"
+	ProjectSection(SolutionItems) = preProject
+		TdsGlobal.config = TdsGlobal.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761CD701-1498-4886-B719-6D6D75756A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Debug|x86.Build.0 = Debug|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Release|x86.ActiveCfg = Release|Any CPU
+		{761CD701-1498-4886-B719-6D6D75756A57}.Release|x86.Build.0 = Release|Any CPU
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Debug|x86.ActiveCfg = Debug|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Debug|x86.Build.0 = Debug|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|Any CPU.ActiveCfg = Release|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|x86.ActiveCfg = Release|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|x86.Build.0 = Release|x86
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|x86.Build.0 = Release|Any CPU
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Release|x86.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E} = {265B3ADF-6754-40A6-BFAC-3DE5824A70D2}
+		{C9D03A8B-4B93-4252-AD16-70621D1E4688} = {309431E7-76AA-4EA2-982A-A28B64062CB9}
+	EndGlobalSection
+EndGlobal

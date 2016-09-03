@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Version.wxi ?>
+  <Product Id="CE1C97B7-84C3-4639-955B-F1DEFD98931D"
+           Name="SymDemo Xfinity Skin"
+           Language="1033"
+           Version="$(var.Version)"
+           Manufacturer="Bissol"
+           UpgradeCode="B3950A3E-BA49-4EBA-AFCF-26DC51DAB90D"
+    >
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
+    <InstanceTransforms Property="INSTANCEID">
+      <Instance Id="I1" ProductCode="2009AAC6-4520-4838-B884-2C8E9144E125"
+                UpgradeCode="09C9F2BC-C557-4153-AFF3-DA5C717577BD" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I2" ProductCode="ED7E274A-3AEE-4E33-B364-CE3A6F7DC386"
+          UpgradeCode="8F95C1E3-234B-408E-9A26-8245F8D71BD2" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I3" ProductCode="E14B9C90-8E7B-48E6-8C10-E158B241F4E2"
+                UpgradeCode="AE9E86E7-A4ED-4C2A-B129-8A0315B2C58F" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I4" ProductCode="AC7E88C7-0164-468D-B746-DAA9557099CE"
+                UpgradeCode="677ECEC7-9312-4F60-AB20-BD49ABB8A6BC" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I5" ProductCode="C48F2636-9914-4C9E-9399-FDDA85E2287B"
+                UpgradeCode="8527DFC9-D42E-4C48-964C-F65271BB1CF8" ProductName="[PRODUCT_NAME]" />
+    </InstanceTransforms>
+    <MediaTemplate EmbedCab="yes" />
+
+    <CustomAction Id="SetProductName"
+              Property="ProductName"
+              Value="[PRODUCT_NAME]" />
+
+
+    <InstallExecuteSequence>
+      <Custom Action="SetProductName" Before="LaunchConditions" />
+    </InstallExecuteSequence>
+
+    <Property Id="INSTANCEID" Value="I0" />
+    <Property Id='PRODUCT_NAME' Value='SymDemo Xfinity Skin' />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+    <Feature Id="ProductFeature" Title="Setup" Level="1">
+      <ComponentGroupRef Id="SymDemo.Skin.Web.Content" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER" Name="webdir">
+        <Directory Id="BIN" Name="bin" />
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>
