@@ -18,6 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{FDF8AC45-F
 		TdsGlobal.config = TdsGlobal.config
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Settings", ".Settings", "{115BED7C-C9FF-408F-A306-C2C9DF74A047}"
+	ProjectSection(SolutionItems) = preProject
+		SymDemo.Skin.Content.nuspec = SymDemo.Skin.Content.nuspec
+		SymDemo.Skin.nuspec = SymDemo.Skin.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +44,7 @@ Global
 		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Debug|x86.ActiveCfg = Debug|x86
 		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Debug|x86.Build.0 = Debug|x86
 		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|Any CPU.ActiveCfg = Release|x86
+		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|Any CPU.Build.0 = Release|x86
 		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|x86.ActiveCfg = Release|x86
 		{160ED99F-11A3-4E3A-BFC2-261E7F9A548E}.Release|x86.Build.0 = Release|x86
 		{C9D03A8B-4B93-4252-AD16-70621D1E4688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
