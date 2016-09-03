@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <?include Version.wxi ?>
   <Product Id="EFDFC1BB-AD13-442C-A882-D98A5CA2C5D7"
-           Name="Bissol Web Common Components"
+           Name="SymDemo Common Web Components"
            Language="1033" 
            Version="$(var.Version)"
            Manufacturer="Bissol"
