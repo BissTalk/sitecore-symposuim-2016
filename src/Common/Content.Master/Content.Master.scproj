@@ -45,7 +45,7 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <PackageName>Bissol.SymDemo.Master</PackageName>
+    <PackageName>SymDemo.Master</PackageName>
     <PackageAuthor>Build Server</PackageAuthor>
     <PackagePublisher>Bissol</PackagePublisher>
     <PackageVersion>1.0.0</PackageVersion>
