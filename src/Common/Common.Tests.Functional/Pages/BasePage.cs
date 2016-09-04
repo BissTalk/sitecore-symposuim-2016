@@ -26,7 +26,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <summary>
         ///     The default timeout.
         /// </summary>
-        private const int DEFAULT_TIMEOUT = 30;
+        private const int DEFAULT_TIMEOUT = 120;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePage{T}" /> class.
