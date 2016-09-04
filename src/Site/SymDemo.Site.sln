@@ -32,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{966F7E48-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Unit", "Tests.Unit\Tests.Unit.csproj", "{E268FF56-E91A-4D8D-AEE6-90DEBD5FA213}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Functional", "Tests.Functional\Tests.Functional.csproj", "{0BC185B6-1B74-4438-9669-1B7E1D203E52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymDemo.Site.Tests.Functional", "Tests.Functional\SymDemo.Site.Tests.Functional.csproj", "{0BC185B6-1B74-4438-9669-1B7E1D203E52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Install", "Install", "{DB09267E-7997-4622-8532-266CD64F28BD}"
 EndProject
