@@ -61,7 +61,7 @@ namespace SymDemo.Common.Tests.Functional.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PhantomJS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("chrome")]
         public string WebDriver {
             get {
                 return ((string)(this["WebDriver"]));

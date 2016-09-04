@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bissol.SymDemo.Common.Tests.Functional.Settings" GeneratedClassName="ApplicationSettings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SymDemo.Common.Tests.Functional.Settings" GeneratedClassName="ApplicationSettings">
   <Profiles />
   <Settings>
     <Setting Name="SitecoreUrl" Type="System.String" Scope="User">
@@ -12,7 +12,7 @@
       <Value Profile="(Default)">b</Value>
     </Setting>
     <Setting Name="WebDriver" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PhantomJS</Value>
+      <Value Profile="(Default)">chrome</Value>
     </Setting>
     <Setting Name="TestResultsFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)">TestResults</Value>
