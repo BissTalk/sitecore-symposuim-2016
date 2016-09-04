@@ -109,10 +109,6 @@
     <Compile Include="WebDriverExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Release.config">
-      <DependentUpon>App.config</DependentUpon>
-	  <SubType>Designer</SubType>
-    </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -136,6 +132,9 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="App.Release.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
