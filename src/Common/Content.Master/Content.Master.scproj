@@ -40,6 +40,25 @@
     <DisableFileDeployment>False</DisableFileDeployment>
     <SitecoreAccessGuid>
     </SitecoreAccessGuid>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>C:\work\spa\Sitecore8\Trunk\CmsDeploymentConfig\packages\OctoPack.3.0.60\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>Symposium Demo Shared Content Templates</NuGetDescription>
+    <NuGetTitle>Symposium Demo Shared Content Templates</NuGetTitle>
+    <NuGetVersion>1.0.0.87</NuGetVersion>
+    <NuGetPackageId>SymDemo.Common.Content.Dev</NuGetPackageId>
+    <NuGetAuthors>Joe Bissol</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes>
+    </NuGetReleaseNotes>
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>

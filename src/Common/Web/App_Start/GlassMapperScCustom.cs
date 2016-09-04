@@ -1,15 +1,24 @@
-#region GlassMapperScCustom generated code
+using System;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
+using Sitecore;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
-namespace SymDemo.Common.Web.App_Start
+namespace SymDemo.Common.Web
 {
+    /// <summary>
+    ///     Glass Mapper customizations.
+    /// </summary>
     public static  class GlassMapperScCustom
     {
-		public static IDependencyResolver CreateResolver(){
+        /// <summary>
+        ///     Creates the resolver.
+        /// </summary>
+        /// <returns>The dependency resolver.</returns>
+        [NotNull]
+        public static IDependencyResolver CreateResolver(){
 			var config = new Glass.Mapper.Sc.Config();
 
 			var dependencyResolver = new DependencyResolver(config);
@@ -17,7 +26,12 @@ namespace SymDemo.Common.Web.App_Start
 			return dependencyResolver;
 		}
 
-		public static IConfigurationLoader[] GlassLoaders(){			
+        /// <summary>
+        ///     Get the Glass Mapper loaders.
+        /// </summary>
+        /// <returns>The Glass Mapper loaders.</returns>
+        [NotNull]
+        public static IConfigurationLoader[] GlassLoaders(){			
 			
 			/* USE THIS AREA TO ADD FLUENT CONFIGURATION LOADERS
              * 
@@ -27,7 +41,11 @@ namespace SymDemo.Common.Web.App_Start
 
 			return new IConfigurationLoader[]{};
 		}
-		public static void PostLoad(){
+
+        /// <summary>
+        ///     Post load setup for things like code first initialization.
+        /// </summary>
+        public static void PostLoad(){
 			//Remove the comments to activate CodeFist
 			/* CODE FIRST START
             var dbs = Sitecore.Configuration.Factory.GetDatabases();
@@ -45,11 +63,16 @@ namespace SymDemo.Common.Web.App_Start
              * CODE FIRST END
              */
 		}
-		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
+
+        /// <summary>
+        ///     Adds the maps.
+        /// </summary>
+        /// <param name="mapsConfigFactory">The maps configuration factory.</param>
+        public static void AddMaps([NotNull] IConfigFactory<IGlassMap> mapsConfigFactory)
         {
+            if (mapsConfigFactory == null) throw new ArgumentNullException(nameof(mapsConfigFactory));
 			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
         }
     }
 }
-#endregion
