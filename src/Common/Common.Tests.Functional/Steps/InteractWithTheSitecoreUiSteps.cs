@@ -42,7 +42,7 @@ namespace SymDemo.Common.Tests.Functional.Steps
         {
             var webDriver = WebDriverFactory.Create(Settings.WebDriver ?? "chrome");
             // ReSharper disable PossibleNullReferenceException
-            webDriver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(0, 0, 60));
+            webDriver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(0, 2, 30));
             webDriver.Manage().Window.Size = new Size(1920, 1080);
             // ReSharper restore PossibleNullReferenceException
             Context.SetWebDriver(webDriver);
