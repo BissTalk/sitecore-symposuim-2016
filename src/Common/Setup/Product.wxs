@@ -34,7 +34,7 @@
     </InstallExecuteSequence>
 
     <Property Id="INSTANCEID" Value="I0" />
-    <Property Id='PRODUCT_NAME' Value='Bissol Web Common Components' />
+    <Property Id='PRODUCT_NAME' Value='SymDemo Web Common Components' />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 

@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>455f1e05-7296-4a0c-85ac-3e2391e4ff78</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SourceWebPhysicalPath>
+    </SourceWebPhysicalPath>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebVirtualPath>
+    </SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Common.Content</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>Common.Content</AssemblyName>
+    <Name>Common.Content</Name>
+    <RootNamespace>Common.Content</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\content.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\IndexFollow.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\IndexNofollow.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NoindexFollow.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NoindexNofollow.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Controllers.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Controllers\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Controllers\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Devices.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Models.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Models\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Models\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Simulators.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Sublayouts.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Sublayouts\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Sublayouts\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\social.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Page.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Page\%2524name.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Page\%2524name\components.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Content.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Content\Home.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Content\Home\components.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Content\Shared.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Data.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Branches\SymDemo\Common\Site\%2524name\Settings.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Components.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Components\__Standard Values.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Item.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Item\Data.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Item\Data\Value.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page\__Standard Values.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page\Data.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page\Data\Description.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page\Data\MetaTags.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Page\Data\Robots.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Site.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\Site\__Standard Values.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\TitledComponent.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\TitledComponent\__Standard Values.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\TitledComponent\Data.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\Common\TitledComponent\Data\Title.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <DeployAlwaysFields>
+      </DeployAlwaysFields>
+      <ExcludeItemFrom>Release</ExcludeItemFrom>
+    </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

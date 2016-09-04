@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Version.wxi ?>
+  <Product Id="D0ADC019-144D-4365-ABDA-CAE4E1CCBB47"
+           Name="SymDemo Web Site"
+           Language="1033" 
+           Version="$(var.Version)"
+           Manufacturer="Bissol"
+           UpgradeCode="09D99CA1-2FAB-4349-B821-C7EBFE165B23"
+    >
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
+    <InstanceTransforms Property="INSTANCEID">
+      <Instance Id="I1" ProductCode="42E3AC26-D2BD-4DE3-89FF-A2F0F09A44FA"
+                UpgradeCode="FC207DBF-2947-42F6-A9D6-92BFEFBF30AC" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I2" ProductCode="B48DD1FD-8BCD-48B1-89C2-994AEACC9443"
+          UpgradeCode="7143D9DD-0AF1-4C26-BDE3-8E944C6573C3" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I3" ProductCode="760F0B3B-38A9-4FB3-84A9-C151ACB1EAE3"
+                UpgradeCode="A9FAD80B-9D57-409F-9496-20ECB55608BA" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I4" ProductCode="C10174CD-2D97-4C78-B74D-1CCBC77B9699"
+                UpgradeCode="736C6FDC-B3D7-4F32-813A-F0899B9AC62A" ProductName="[PRODUCT_NAME]" />
+      <Instance Id="I5" ProductCode="7E4ED5A9-E07B-4009-A6A7-FCD668CE83E4"
+                UpgradeCode="13DFB22C-0A20-40C7-9C36-D1F6CC563EE7" ProductName="[PRODUCT_NAME]" />
+    </InstanceTransforms>
+    <MediaTemplate EmbedCab="yes" />
+
+    <CustomAction Id="SetProductName"
+              Property="ProductName"
+              Value="[PRODUCT_NAME]" />
+
+
+    <InstallExecuteSequence>
+      <Custom Action="SetProductName" Before="LaunchConditions" />
+    </InstallExecuteSequence>
+
+    <Property Id="INSTANCEID" Value="I0" />
+    <Property Id='PRODUCT_NAME' Value='SymDemo Web Site' />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+		<Feature Id="ProductFeature" Title="Setup" Level="1">
+      <ComponentGroupRef Id="SymDemo.Site.Web.Content" />
+      <ComponentGroupRef Id="SymDemo.Site.Web.Binaries" />
+      
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER" Name="webdir">
+        <Directory Id="BIN" Name="bin" />
+      </Directory>
+		</Directory>
+	</Fragment>
+</Wix>

@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {F930DDC6-6C30-4ACC-AB44-8B64215BBFC8}
+database: master
+path: /sitecore/content/DemoSite/Content/Home
+parent: {BB870821-EF0C-469F-9B4C-9F68A962C8C5}
+name: Home
+master: {8642D07B-FDD2-47E4-8A34-C2C320BE58ED}
+template: {3FD92B84-4273-4A0D-B30B-2C824D44D760}
+templatekey: Page
+created: 20160904T131706:636085918260970000
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 29
+
+Core3/32x32/home_yellow_h.png
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 38
+
+{A3ECF10D-D9BC-4BD1-AFD2-73D705A39FA0}
+----version----
+language: en
+version: 1
+revision: 1f539e01-4619-419d-b80e-011e9e1e0930
+
+----field----
+field: {5D6B32BD-02C7-4F95-9BCE-C487D398699A}
+name: Title
+key: title
+content-length: 8
+
+New Page
+----field----
+field: {E4C7AF10-B316-4AF1-976A-06A433B0A32A}
+name: Description
+key: description
+content-length: 23
+
+Description of New Page
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160904T131706Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1f539e01-4619-419d-b80e-011e9e1e0930
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160904T131706Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

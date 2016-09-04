@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {74615053-FAE7-431A-9DCA-E0CFD0B749A3}
+database: master
+path: /sitecore/content/DemoSite
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: DemoSite
+master: {8642D07B-FDD2-47E4-8A34-C2C320BE58ED}
+template: {A3D3C012-0250-4D86-A75F-52F3C23D6AA5}
+templatekey: Site
+created: 20160904T131705:636085918254970000
+
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 38
+
+{D12B49D6-5992-46A6-BDE4-1290B596E198}
+----version----
+language: en
+version: 1
+revision: ded700a1-dfec-4b9a-9e7e-99b2facf0949
+
+----field----
+field: {5D6B32BD-02C7-4F95-9BCE-C487D398699A}
+name: Title
+key: title
+content-length: 8
+
+DemoSite
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160904T131705Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ded700a1-dfec-4b9a-9e7e-99b2facf0949
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160904T131705Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
