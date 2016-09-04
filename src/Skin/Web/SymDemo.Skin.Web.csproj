@@ -98,8 +98,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="sitecore\shell\Themes\Xfinity\LaunchPad.css" />
     <Content Include="sitecore\shell\Themes\Backgrounds\readme.txt" />
-    <None Include="sitecore\shell\Themes\Backgrounds\Xfinity_Wallpaper.jpg" />
+    <Content Include="sitecore\shell\Themes\Backgrounds\Xfinity_Wallpaper.jpg" />
+    <Content Include="sitecore\shell\Themes\Xfinity\Xfinity-small.png" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

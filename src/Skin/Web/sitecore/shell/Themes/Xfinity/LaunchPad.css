@@ -1,0 +1,7 @@
+﻿@import url(/sitecore/shell/client/Applications/LaunchPad/LaunchPad.css);
+
+.sc-applicationContent-main {
+    background-image: url(Xfinity-small.png) !important;
+    background-repeat: repeat !important;
+    
+}
