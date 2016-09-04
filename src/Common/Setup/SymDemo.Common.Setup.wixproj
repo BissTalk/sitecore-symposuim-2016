@@ -25,6 +25,14 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Models\SymDemo.Common.Models.csproj">
+      <Name>SymDemo.Common.Models</Name>
+      <Project>{6302c89b-45e2-49e4-a53a-814cca3376d8}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
     <ProjectReference Include="..\Core\SymDemo.Core.csproj">
       <Name>SymDemo.Core</Name>
       <Project>{490793bc-a9fb-4221-b31d-ce7134dbcc0b}</Project>

@@ -42,6 +42,7 @@
       <ComponentGroupRef Id="SymDemo.Core.Binaries" />
 			<ComponentGroupRef Id="SymDemo.Common.Web.Content" />
       <ComponentGroupRef Id="SymDemo.Common.Web.Binaries" />
+      <ComponentGroupRef Id="SymDemo.Common.Models.Binaries" />
       <ComponentGroupRef Id="SymDemo.UnityContainerManager.Binaries" />
       <ComponentGroupRef Id="Dependencies" />
 		</Feature>
