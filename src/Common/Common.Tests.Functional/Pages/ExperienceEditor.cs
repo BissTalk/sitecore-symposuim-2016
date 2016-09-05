@@ -79,7 +79,11 @@ namespace SymDemo.Common.Tests.Functional.Pages
                 }
                 catch (WebDriverException) // timeout
                 {
-                    retryCount ++;
+                    retryCount++;
+                }
+                catch (System.Reflection.TargetInvocationException)// timeout 
+                {
+                    retryCount++;
                 }
             }
             return this;
