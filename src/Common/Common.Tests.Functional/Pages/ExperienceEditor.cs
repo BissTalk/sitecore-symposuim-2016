@@ -58,34 +58,16 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <returns>This instance.</returns>
         public override ExperienceEditor VerifyPageLoaded()
         {
-            var keepTrying = true;
-            var retryCount = 0;
-            // This is a work around for an issue in PhantomJS on pages that load slow  & have many AJAX calls.
-            while (retryCount < 5 && keepTrying)
-            {
-                try
+            new WebDriverWait(WebDriver, TimeSpan.FromSeconds(Timeout)).Until(
+                d =>
                 {
-                    new WebDriverWait(WebDriver, TimeSpan.FromSeconds(Timeout)).Until(
-                        d =>
-                        {
-                            IWebElement el = null;
-                            var t = d?.PageSource != null;
-                            t = t && d.PageSource.Contains(PageVerificationText);
-                            t = t && (el = d.FindElement(By.Id("ribbonPreLoadingIndicator"))) != null;
-                            t = t && el.GetCssValue("display") == "none";
-                            return t;
-                        });
-                    keepTrying = false;
-                }
-                catch (WebDriverException) // timeout
-                {
-                    retryCount++;
-                }
-                catch (System.Reflection.TargetInvocationException)// timeout 
-                {
-                    retryCount++;
-                }
-            }
+                    IWebElement el = null;
+                    var t = d?.PageSource != null;
+                    t = t && d.PageSource.Contains(PageVerificationText);
+                    t = t && (el = d.FindElement(By.Id("ribbonPreLoadingIndicator"))) != null;
+                    t = t && el.GetCssValue("display") == "none";
+                    return t;
+                });
             return this;
         }
     }

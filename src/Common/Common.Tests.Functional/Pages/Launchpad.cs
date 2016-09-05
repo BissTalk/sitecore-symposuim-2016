@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection;
 using SymDemo.Common.Tests.Functional.Pages;
 using JetBrains.Annotations;
 using OpenQA.Selenium;
@@ -132,7 +133,14 @@ public class Launchpad : BasePage<Launchpad>
     [NotNull]
     public Launchpad ClickExperienceEditorLink()
     {
-        experienceEditorLink.Click();
+        try
+        {
+            experienceEditorLink.Click();
+        }
+        catch (TargetInvocationException)
+        {
+            // HACK: to fix 60 second timeout issue.
+        }
         return this;
     }
 
