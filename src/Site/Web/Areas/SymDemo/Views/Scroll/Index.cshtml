@@ -1,51 +1,32 @@
-﻿@model dynamic
-
+﻿@inherits GlassView<SymDemo.Site.Models.Items.ScrollSource>
+@{
+    var isInEditingMode = Sitecore.Context.PageMode.IsExperienceEditorEditing;
+}
 <article class="starwars">
-    <audio preload="auto">
-@*        <source src="/Areas/SymDemo/Assets/audio/starwars.ogg" type="audio/ogg" />*@
-        <source src="/Areas/SymDemo/Assets/audio/starwars.mp3" type="audio/mpeg" />
-    </audio>
-
+    @if (!isInEditingMode)
+    {
+        <audio  autoplay="autoplay">
+            @*<source src="/Areas/SymDemo/Assets/audio/starwars.ogg" type="audio/ogg" />*@
+            <source src="/Areas/SymDemo/Assets/audio/starwars.mp3" type="audio/mpeg"/>
+        </audio>
+        @Html.AddStyle("/Areas/SymDemo/Assets/styles/animate.css")
+    }
+    
     <div class="animation">
 
         <section class="intro">
-            A long time ago, in a galaxy far,<br> far away....
+            @Editable(m => m.Intro)
+        </section>
+
+        <section class="logo">
+            @Editable(m => m.Image)
         </section>
 
         <section class="titles">
             <div>
-                <p>
-                    It is a period of civil war.
-                    Rebel spaceships, striking
-                    from a hidden base, have won
-                    their first victory against
-                    the evil Galactic Empire.
-                </p>
-
-                <p>
-                    During the battle, Rebel
-                    spies managed to steal secret
-                    plans to the Empire's
-                    ultimate weapon, the DEATH
-                    STAR, an armored space
-                    station with enough power to
-                    destroy an entire planet.
-                </p>
-
-                <p>
-                    Pursued by the Empire's
-                    sinister agents, Princess
-                    Leia races home aboard her
-                    starship, custodian of the
-                    stolen plan that can save
-                    her people and restore
-                    freedom to the galaxy....
-                </p>
+                 @Editable(m => m.Text)
             </div>
         </section>
 
-        <section class="logo">
-            <img src="/Areas/SymDemo/Assets/styles/imgs/logo.png"/>
-        </section>
     </div>
 </article>

@@ -25,10 +25,10 @@
     <AssemblyStatus>Exclude</AssemblyStatus>
     <EnableCodeGeneration>True</EnableCodeGeneration>
     <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
-    <CodeGenTargetProject>SymDemo.Site.Web</CodeGenTargetProject>
+    <CodeGenTargetProject>SymDemo.Site.Models</CodeGenTargetProject>
     <BaseTransformFile />
     <HeaderTransformFile>glassv4header.tt</HeaderTransformFile>
-    <CodeGenFile>Models.Generated</CodeGenFile>
+    <CodeGenFile>Models.Generated.cs</CodeGenFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,6 +90,14 @@
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\DemoSite\Content\Home.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\DemoSite\Content\Home\components.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\DemoSite\Content\Home\components\Scroll.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
@@ -232,6 +240,28 @@
     <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <CodeGenTemplate>glassv4item.tt</CodeGenTemplate>
+      <CodeGenNamespace>Items</CodeGenNamespace>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite\ScrollSource.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite\ScrollSource\Data.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite\ScrollSource\Data\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite\ScrollSource\Data\Intro.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\SymDemo\DemoSite\ScrollSource\Data\Text.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
   </ItemGroup>
   <ItemGroup>

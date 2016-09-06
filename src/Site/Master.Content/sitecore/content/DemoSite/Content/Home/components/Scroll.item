@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {1149751C-8BF9-4525-B0E8-94AF4F70082C}
+database: master
+path: /sitecore/content/DemoSite/Content/Home/components/Scroll
+parent: {E452CAC5-C009-49D4-890D-5AF5F1AE38A3}
+name: Scroll
+master: {00000000-0000-0000-0000-000000000000}
+template: {74B86B0C-87F0-4157-BE9C-B6792D494BB5}
+templatekey: ScrollSource
+created: 20160906T192133:636087864931230000
+
+----version----
+language: en
+version: 1
+revision: c65df85e-1a83-4720-b257-427494ea21b2
+
+----field----
+field: {EC3E21E0-9B43-41BB-A1D8-95A5DF85D056}
+name: Intro
+key: intro
+content-length: 50
+
+A long time ago, in a galaxy far,<br> far away....
+----field----
+field: {D251CC9C-40EC-4FBF-B331-E95649923BE7}
+name: Text
+key: text
+content-length: 990
+
+ <p>
+                    It is a period of civil war.
+                    Rebel spaceships, striking
+                    from a hidden base, have won
+                    their first victory against
+                    the evil Galactic Empire.
+                </p>
+
+                <p>
+                    During the battle, Rebel
+                    spies managed to steal secret
+                    plans to the Empire's
+                    ultimate weapon, the DEATH
+                    STAR, an armored space
+                    station with enough power to
+                    destroy an entire planet.
+                </p>
+
+                <p>
+                    Pursued by the Empire's
+                    sinister agents, Princess
+                    Leia races home aboard her
+                    starship, custodian of the
+                    stolen plan that can save
+                    her people and restore
+                    freedom to the galaxy....
+                </p>
+
+----field----
+field: {2F5F0DBE-C1A8-4934-A867-E3BF9124742A}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{68F018C4-3646-44EF-AE8B-709076FB8028}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160906T192133Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c65df85e-1a83-4720-b257-427494ea21b2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160906T192536Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
