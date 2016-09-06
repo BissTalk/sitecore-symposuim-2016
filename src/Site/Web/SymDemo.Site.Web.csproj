@@ -95,12 +95,12 @@
       <HintPath>..\packages\SymDemo.Common.Models.1.0.0.87\lib\net452\SymDemo.Common.Models.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SymDemo.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SymDemo.Core.1.0.0.87\lib\net452\SymDemo.Core.dll</HintPath>
+    <Reference Include="SymDemo.Core, Version=1.0.0.88, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SymDemo.Core.1.0.0.88\lib\net452\SymDemo.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SymDemo.UnityContainerManager, Version=1.0.6090.43080, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SymDemo.Core.1.0.0.87\lib\net452\SymDemo.UnityContainerManager.dll</HintPath>
+    <Reference Include="SymDemo.UnityContainerManager, Version=1.0.0.88, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SymDemo.Core.1.0.0.88\lib\net452\SymDemo.UnityContainerManager.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -162,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\SymDemo\Glass.Mapper.Sc.Start.config" />
+    <Content Include="Areas\SymDemo\Views\Layout\MainLayout.cshtml" />
+    <Content Include="Areas\SymDemo\Views\Shared\_Layout.cshtml" />
+    <None Include="Areas\SymDemo\Views\_ViewStart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,7 +189,6 @@
   <ItemGroup>
     <Folder Include="Areas\SymDemo\Controllers\" />
     <Folder Include="Areas\SymDemo\Models\" />
-    <Folder Include="Areas\SymDemo\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\SymDemo.Site.Models.csproj">

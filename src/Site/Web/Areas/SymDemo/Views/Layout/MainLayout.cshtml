@@ -1,0 +1,40 @@
+﻿@using System.Collections.Specialized
+@using Sitecore.Mvc
+
+@model SymDemo.Common.Models.Items.Page
+
+@{
+    Layout = "~/Areas/SymDemo/Views/Shared/_Layout.cshtml";
+
+    var isInEditingMode = Sitecore.Context.PageMode.IsExperienceEditorEditing;
+
+    if (ViewBag != null)
+    {
+        ViewBag.Title = Model.Title;
+    }
+    Model.MetaTags = Model.MetaTags ?? new NameValueCollection();
+}@section head
+ {
+    @if (!String.IsNullOrEmpty(Model.Description))
+    {
+        <meta name="description" content="@Model.Description" />
+    }@if (!string.IsNullOrEmpty(Model.Robots))
+    {
+        <meta name="robots" content="@Model.Robots" />
+    }@foreach (string tagName in Model.MetaTags)
+    {
+        <meta name="@tagName" content="@Model.MetaTags[tagName]" />
+    }@if(!isInEditingMode){@Html.Sitecore().Placeholder("ma-head")}
+}
+    <a class="mars-skip-nav" href="#main">Skip to main content</a>
+    <header class="mars-header" role="banner">
+        @Html.Sitecore().Placeholder("symDemo-top")
+    </header>
+    <main class="mars-main" id="main" role="main">
+        @Html.Sitecore().Placeholder("symDemo-main")
+    </main>
+    <footer class="mars-footer" role="contentinfo">
+        @Html.Sitecore().Placeholder("symDemo-bottom")
+    </footer>
+@section bottom
+{}

@@ -22,7 +22,7 @@
     <RootNamespace>Master.Content</RootNamespace>
     <ManageRoles>False</ManageRoles>
     <SitecoreDatabase>master</SitecoreDatabase>
-    <AssemblyStatus>Include</AssemblyStatus>
+    <AssemblyStatus>Exclude</AssemblyStatus>
     <EnableCodeGeneration>True</EnableCodeGeneration>
     <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
     <CodeGenTargetProject>SymDemo.Site.Web</CodeGenTargetProject>
@@ -67,9 +67,6 @@
       <Project>{9cd72766-edc4-4e9f-a389-2ab5f937e43b}</Project>
       <Name>SymDemo.Site.Web</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ExcludedAssemblies Include="SymDemo.Site.%2a" />
   </ItemGroup>
   <ItemGroup>
     <CodeGenTemplate Include="Code Generation Templates\generalextensions.tt" />
@@ -135,6 +132,10 @@
     <SitecoreItem Include="sitecore\layout\Layouts\SymDemo\DemoSite.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\SymDemo\DemoSite\MainLayout.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Models.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
@@ -236,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <CodeGenReferencedProject Include="{455f1e05-7296-4a0c-85ac-3e2391e4ff78}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Sitecore.%2a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>
