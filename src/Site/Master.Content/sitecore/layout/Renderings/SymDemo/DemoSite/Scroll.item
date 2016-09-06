@@ -14,9 +14,9 @@ created: 20160906T181545:636087825451470000
 field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
 name: Controller
 key: controller
-content-length: 6
+content-length: 77
 
-Scroll
+SymDemo.Site.Web.Areas.SymDemo.Controllers.ScrollController, SymDemo.Site.Web
 ----field----
 field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
 name: Controller Action
@@ -35,13 +35,27 @@ SymDemo
 field: {94069F66-609C-48B0-8281-521C30FB269D}
 name: Open Properties after Add
 key: open properties after add
-content-length: 1
+content-length: 0
 
--
+
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 12
+
+./components
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 49
+
+/sitecore/templates/SymDemo/DemoSite/ScrollSource
 ----version----
 language: en
 version: 1
-revision: ab0e4e1e-f6d6-4a11-978c-2e7d9700ebcd
+revision: 5e06249d-6a7e-48fb-99be-b967d8714564
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ab0e4e1e-f6d6-4a11-978c-2e7d9700ebcd
+5e06249d-6a7e-48fb-99be-b967d8714564
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160906T181607Z
+20160906T213116Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
