@@ -140,9 +140,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Models\SymDemo.Common.Models.csproj">
+      <Project>{6302c89b-45e2-49e4-a53a-814cca3376d8}</Project>
+      <Name>SymDemo.Common.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\SymDemo.Core.csproj">
       <Project>{490793bc-a9fb-4221-b31d-ce7134dbcc0b}</Project>
       <Name>SymDemo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityContainerManager\SymDemo.UnityContainerManager.csproj">
+      <Project>{b51fae8e-cad0-4a53-bef3-9cf67b911a7b}</Project>
+      <Name>SymDemo.UnityContainerManager</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
