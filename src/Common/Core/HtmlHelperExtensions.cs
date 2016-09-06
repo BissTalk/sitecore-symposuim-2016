@@ -90,7 +90,7 @@ namespace SymDemo
         /// <param name="html">The HTML.</param>
         /// <returns>HTML Tags for scripts.</returns>
         [UsedImplicitly]
-        public static HtmlString WriteScripts<T>([NotNull] HtmlHelper<T> html)
+        public static HtmlString WriteScripts<T>([NotNull] this HtmlHelper<T> html)
         {
             if(html == null) throw new ArgumentNullException(nameof(html));
 
