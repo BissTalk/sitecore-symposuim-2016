@@ -95,12 +95,12 @@
       <HintPath>..\packages\SymDemo.Common.Models.1.0.0.87\lib\net452\SymDemo.Common.Models.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SymDemo.Core, Version=1.0.0.88, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SymDemo.Core.1.0.0.88\lib\net452\SymDemo.Core.dll</HintPath>
+    <Reference Include="SymDemo.Core, Version=1.0.0.90, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SymDemo.Core.1.0.0.90\lib\net452\SymDemo.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SymDemo.UnityContainerManager, Version=1.0.0.88, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SymDemo.Core.1.0.0.88\lib\net452\SymDemo.UnityContainerManager.dll</HintPath>
+    <Reference Include="SymDemo.UnityContainerManager, Version=1.0.0.90, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SymDemo.Core.1.0.0.90\lib\net452\SymDemo.UnityContainerManager.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -162,8 +162,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\SymDemo\Glass.Mapper.Sc.Start.config" />
+    <Content Include="Areas\SymDemo\Assets\audio\starwars.mp3" />
+    <Content Include="Areas\SymDemo\Assets\styles\imgs\logo.png" />
+    <Content Include="Areas\SymDemo\Assets\styles\imgs\stars.jpg" />
+    <Content Include="Areas\SymDemo\Assets\styles\site.css" />
     <Content Include="Areas\SymDemo\Views\Layout\MainLayout.cshtml" />
     <Content Include="Areas\SymDemo\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SymDemo\Views\Scroll\Index.cshtml" />
+    <Content Include="Areas\SymDemo\Assets\styles\fonts\DroidSans.woff2" />
+    <Content Include="Areas\SymDemo\Assets\styles\fonts\DroidSans-Bold.woff2" />
+    <Content Include="Areas\SymDemo\Assets\audio\starwars.ogg" />
     <None Include="Areas\SymDemo\Views\_ViewStart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -173,6 +181,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnitySetup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\SymDemo\Controllers\ScrollController.cs" />
     <Compile Include="Areas\SymDemo\SymDemoAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -187,7 +196,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\SymDemo\Controllers\" />
     <Folder Include="Areas\SymDemo\Models\" />
   </ItemGroup>
   <ItemGroup>

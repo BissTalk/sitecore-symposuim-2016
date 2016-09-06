@@ -1,5 +1,4 @@
 ﻿@using System.Collections.Specialized
-@using Sitecore.Mvc
 
 @model SymDemo.Common.Models.Items.Page
 
@@ -24,15 +23,15 @@
     }@foreach (string tagName in Model.MetaTags)
     {
         <meta name="@tagName" content="@Model.MetaTags[tagName]" />
-    }@if(!isInEditingMode){@Html.Sitecore().Placeholder("ma-head")}
-}
-    <header class="mars-header" role="banner">
+    }@if(!isInEditingMode){@Html.Sitecore().Placeholder("ma-head")}}
+    @Html.AddStyle("/Areas/SymDemo/Assets/styles/site.css")
+    <header role="banner">
         @Html.Sitecore().Placeholder("symDemo-top")
     </header>
-    <main class="mars-main" id="main" role="main">
+    <main id="main" role="main">
         @Html.Sitecore().Placeholder("symDemo-main")
     </main>
-    <footer class="mars-footer" role="contentinfo">
+    <footer role="contentinfo">
         @Html.Sitecore().Placeholder("symDemo-bottom")
     </footer>
 @section bottom
