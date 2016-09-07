@@ -13,7 +13,7 @@ created: 20160906T192133:636087864931230000
 ----version----
 language: en
 version: 1
-revision: c65df85e-1a83-4720-b257-427494ea21b2
+revision: 2ffa800e-e7f9-4b60-80a7-259f6062447d
 
 ----field----
 field: {EC3E21E0-9B43-41BB-A1D8-95A5DF85D056}
@@ -21,41 +21,16 @@ name: Intro
 key: intro
 content-length: 50
 
-A long time ago, in a galaxy far,<br> far away....
+A long time ago, on a server far,<br> far away....
 ----field----
 field: {D251CC9C-40EC-4FBF-B331-E95649923BE7}
 name: Text
 key: text
-content-length: 990
+content-length: 755
 
- <p>
-                    It is a period of civil war.
-                    Rebel spaceships, striking
-                    from a hidden base, have won
-                    their first victory against
-                    the evil Galactic Empire.
-                </p>
-
-                <p>
-                    During the battle, Rebel
-                    spies managed to steal secret
-                    plans to the Empire's
-                    ultimate weapon, the DEATH
-                    STAR, an armored space
-                    station with enough power to
-                    destroy an entire planet.
-                </p>
-
-                <p>
-                    Pursued by the Empire's
-                    sinister agents, Princess
-                    Leia races home aboard her
-                    starship, custodian of the
-                    stolen plan that can save
-                    her people and restore
-                    freedom to the galaxy....
-                </p>
-
+<p>It is a period of static and boring web experiences. Rebel developers and marketers armed with Sitecore have decided to take matters into their own hands and stage sneak attack on the evils of static web sites and win people over with dynamic and personalized experiences.</p>
+<p>During the battle to win over customers with awesome experiences, the Rebels used xDB to listen to their customers and tell Sitecore how to self tune itself using machine learning.</p>
+<p>Developers quickly realized that awesome experiences should not be confined to only web pages so they expanded their mission to native applications using Sitecore Item Web API, emails using the Email Experience Manager, and the used FXM for revitalizing legacy static web sites...</p>
 ----field----
 field: {2F5F0DBE-C1A8-4934-A867-E3BF9124742A}
 name: Image
@@ -90,14 +65,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c65df85e-1a83-4720-b257-427494ea21b2
+2ffa800e-e7f9-4b60-80a7-259f6062447d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160906T192536Z
+20160907T153743Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -105,3 +80,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

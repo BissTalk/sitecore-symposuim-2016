@@ -12,13 +12,6 @@
 
   z-index: 1;
 }
-.starwars .start {
-  font-size: 200%;
-  width: 14em;
-  margin: -4em 0 0 -7em;
-  text-align: center;
-  cursor: pointer;
-}
 .starwars .start span {
   color: #4bd5ee;
 }
@@ -39,7 +32,7 @@
 }
 
 .starwars .titles {
-  width: 14.65em;
+  width: 18em;
   margin: 0 0 0 -7.325em;
   top: auto;
   bottom: 0;

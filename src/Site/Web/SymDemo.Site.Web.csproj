@@ -176,6 +176,7 @@
     <Content Include="Areas\SymDemo\Assets\styles\fonts\DroidSans.woff2" />
     <Content Include="Areas\SymDemo\Assets\styles\fonts\DroidSans-Bold.woff2" />
     <Content Include="Areas\SymDemo\Assets\audio\starwars.ogg" />
+    <Content Include="App_Config\Include\SymDemo\SiteDefinision.config" />
     <None Include="Areas\SymDemo\Views\_ViewStart.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>

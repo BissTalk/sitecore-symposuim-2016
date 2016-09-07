@@ -34,15 +34,15 @@ content-length: 310
 ----version----
 language: en
 version: 1
-revision: 97db070f-ac81-48a4-be80-de6586476899
+revision: a3806781-8bb0-443b-b8b8-c205a71e5e30
 
 ----field----
 field: {5D6B32BD-02C7-4F95-9BCE-C487D398699A}
 name: Title
 key: title
-content-length: 8
+content-length: 27
 
-New Page
+The Demo Site Landing Page 
 ----field----
 field: {E4C7AF10-B316-4AF1-976A-06A433B0A32A}
 name: Description
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-97db070f-ac81-48a4-be80-de6586476899
+a3806781-8bb0-443b-b8b8-c205a71e5e30
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160906T201303Z
+20160907T144548Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -78,3 +78,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
