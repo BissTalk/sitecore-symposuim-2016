@@ -110,19 +110,19 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\IndexFollow.item">
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\INDEX FOLLOW.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\IndexNofollow.item">
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\INDEX NOFOLLOW.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NoindexFollow.item">
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NOINDEX FOLLOW.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NoindexNofollow.item">
+    <SitecoreItem Include="sitecore\content\SymDemo\Common\Settings\Robots\NOINDEX NOFOLLOW.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>

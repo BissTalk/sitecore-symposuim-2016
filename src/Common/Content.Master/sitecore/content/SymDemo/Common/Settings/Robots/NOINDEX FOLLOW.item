@@ -2,9 +2,9 @@
 version: 1
 id: {5B6346B9-2E75-4C22-B38C-544EE82BF7B9}
 database: master
-path: /sitecore/content/SymDemo/Common/Settings/Robots/NoindexFollow
+path: /sitecore/content/SymDemo/Common/Settings/Robots/NOINDEX FOLLOW
 parent: {2A9E7CF8-0967-4EAD-8D76-A06E39228561}
-name: NoindexFollow
+name: NOINDEX FOLLOW
 master: {00000000-0000-0000-0000-000000000000}
 template: {52A71948-4930-479C-9B65-E4300F50502F}
 templatekey: Item
@@ -14,13 +14,13 @@ created: 20160902T154815:636084280951430000
 field: {9C6106EA-7A5A-48E2-8CAD-F0F693B1E2D4}
 name: __Read Only
 key: __read only
-content-length: 1
+content-length: 0
 
-1
+
 ----version----
 language: en
 version: 1
-revision: b49b54f3-ca8f-4fd6-a056-401d0cf19018
+revision: 1f031e25-23e1-4a53-93d4-f4a21c526244
 
 ----field----
 field: {8C0DE2F9-0546-4040-9F93-7CE3CC7ED23A}
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b49b54f3-ca8f-4fd6-a056-401d0cf19018
+1f031e25-23e1-4a53-93d4-f4a21c526244
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160902T155230Z
+20160907T145450Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

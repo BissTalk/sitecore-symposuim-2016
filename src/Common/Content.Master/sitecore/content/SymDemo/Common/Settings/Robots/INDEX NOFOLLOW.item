@@ -1,41 +1,41 @@
 ----item----
 version: 1
-id: {0ECD5400-9329-4FFC-9630-BDEBAEA13A8D}
+id: {98698639-89DF-4E4E-AEC5-E582E2D5A880}
 database: master
-path: /sitecore/content/SymDemo/Common/Settings/Robots/IndexFollow
+path: /sitecore/content/SymDemo/Common/Settings/Robots/INDEX NOFOLLOW
 parent: {2A9E7CF8-0967-4EAD-8D76-A06E39228561}
-name: IndexFollow
+name: INDEX NOFOLLOW
 master: {00000000-0000-0000-0000-000000000000}
 template: {52A71948-4930-479C-9B65-E4300F50502F}
 templatekey: Item
-created: 20160902T141642:636084226026030000
+created: 20160902T141801:636084226819800000
 
 ----field----
 field: {9C6106EA-7A5A-48E2-8CAD-F0F693B1E2D4}
 name: __Read Only
 key: __read only
-content-length: 1
+content-length: 0
 
-1
+
 ----version----
 language: en
 version: 1
-revision: 7240314b-8240-4abf-aed7-faa37a99dd19
+revision: 3b5a0065-cb47-4278-b765-a99222471070
 
 ----field----
 field: {8C0DE2F9-0546-4040-9F93-7CE3CC7ED23A}
 name: Value
 key: value
-content-length: 12
+content-length: 15
 
-INDEX,FOLLOW
+INDEX, NOFOLLOW
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 13
+content-length: 15
 
-INDEX, FOLLOW
+INDEX, NOFOLLOW
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160902T141642Z
+20160902T141802Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7240314b-8240-4abf-aed7-faa37a99dd19
+3b5a0065-cb47-4278-b765-a99222471070
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160902T155225Z
+20160907T145430Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
