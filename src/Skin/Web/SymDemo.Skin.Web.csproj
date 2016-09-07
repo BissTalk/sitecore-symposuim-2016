@@ -98,6 +98,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="sitecore\shell\Themes\Backgrounds\bissol_wallpaper-red.jpg" />
     <Content Include="sitecore\shell\Themes\Bissol\LaunchPad.css" />
     <Content Include="sitecore\shell\Themes\Backgrounds\readme.txt" />
     <Content Include="sitecore\shell\Themes\Backgrounds\bissol_wallpaper.jpg" />
