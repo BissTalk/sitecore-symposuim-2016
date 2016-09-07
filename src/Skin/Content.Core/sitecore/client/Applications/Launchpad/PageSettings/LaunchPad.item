@@ -14,9 +14,9 @@ created: 20160519T084312:635992441924800000
 field: {834B2406-24A9-4376-9350-CBE6DA96C51A}
 name: Stylesheet
 key: stylesheet
-content-length: 44
+content-length: 43
 
-/sitecore/shell/Themes/Xfinity/LaunchPad.css
+/sitecore/shell/Themes/bissol/LaunchPad.css
 ----version----
 language: da
 version: 1
@@ -128,7 +128,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: d3e8f507-c903-4d7a-8849-043e17e66d31
+revision: 9368ae6e-0cd4-44d1-9a80-a91a57d76484
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -157,14 +157,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d3e8f507-c903-4d7a-8849-043e17e66d31
+9368ae6e-0cd4-44d1-9a80-a91a57d76484
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160904T030610Z
+20160907T165428Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

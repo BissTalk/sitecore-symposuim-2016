@@ -14,9 +14,9 @@ created: 20160519T084130:635992440900000000
 field: {E20FD18B-6F85-4A71-A086-BEE3C0546277}
 name: Wallpaper
 key: wallpaper
-content-length: 56
+content-length: 55
 
-/sitecore/shell/themes/backgrounds/Xfinity_Wallpaper.jpg
+/sitecore/shell/themes/backgrounds/bissol_wallpaper.jpg
 ----version----
 language: da
 version: 1
@@ -128,7 +128,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 6770986d-8473-4fa1-8f01-9f1b07f42f5a
+revision: ca8d8426-c85d-4cb1-a1ec-fa4d380837cb
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -157,14 +157,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6770986d-8473-4fa1-8f01-9f1b07f42f5a
+ca8d8426-c85d-4cb1-a1ec-fa4d380837cb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160904T030732Z
+20160907T165506Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

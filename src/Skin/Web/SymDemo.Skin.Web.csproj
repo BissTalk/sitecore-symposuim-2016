@@ -82,7 +82,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Xfinity-Theme\Theme.config" />
+    <Content Include="App_Config\Include\Bissol-Theme\Theme.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -98,10 +98,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sitecore\shell\Themes\Xfinity\LaunchPad.css" />
+    <Content Include="sitecore\shell\Themes\Bissol\LaunchPad.css" />
     <Content Include="sitecore\shell\Themes\Backgrounds\readme.txt" />
-    <Content Include="sitecore\shell\Themes\Backgrounds\Xfinity_Wallpaper.jpg" />
-    <Content Include="sitecore\shell\Themes\Xfinity\Xfinity-small.png" />
+    <Content Include="sitecore\shell\Themes\Backgrounds\bissol_wallpaper.jpg" />
+    <Content Include="sitecore\shell\Themes\Bissol\bissol-small.png" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
