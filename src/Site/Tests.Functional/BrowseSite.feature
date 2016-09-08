@@ -1,11 +1,10 @@
-﻿Feature: BrowseSite
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿@WebDriver
+Feature: BrowseSite
+	In order to see the site
+	As a browser of the web
+	I want to see a cool home page
 
 @smoke
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: View the scroll
+	When I go to the home page
+	Then I can see the scroll
