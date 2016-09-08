@@ -26,7 +26,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <summary>
         ///     The default timeout.
         /// </summary>
-        private const int DEFAULT_TIMEOUT = 120;
+        private const int DEFAULT_TIMEOUT = 3; // minutes
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePage{T}" /> class.
@@ -144,7 +144,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         [NotNull]
         public virtual T VerifyPageUrl()
         {
-            new WebDriverWait(WebDriver, TimeSpan.FromSeconds(Timeout)).Until(d => d.Url.Contains(RelativePath));
+            new WebDriverWait(WebDriver, TimeSpan.FromMinutes(Timeout)).Until(d => d.Url.Contains(RelativePath));
             return (T) this;
         }
 
