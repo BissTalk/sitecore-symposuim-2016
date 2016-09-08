@@ -33,7 +33,6 @@ body {
 }
 .starwars section {
     margin: 0 auto;
-    border: 1px solid black;
     width: 50%;
     font-size: 275%;
     text-align: justify;
@@ -41,12 +40,10 @@ body {
 
 .starwars .intro {
     color: #4bd5ee;
-
 }
 
 .starwars .titles {
     font-weight: bold;
-    
 }
 
 .starwars section.logo { 
