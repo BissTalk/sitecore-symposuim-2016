@@ -21,12 +21,12 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <summary>
         ///     The default test results folder
         /// </summary>
-        private const string DEFAULT_TEST_RESULTS_FOLDER = "TestResults";
+        protected const string DefaultTestResultsFolder = "TestResults";
 
         /// <summary>
         ///     The default timeout.
         /// </summary>
-        private const int DEFAULT_TIMEOUT = 3; // minutes
+        protected const int DefaultTimeout = 4; // minutes
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePage{T}" /> class.
@@ -44,7 +44,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <param name="data">The data.</param>
         /// <param name="timeout">The timeout.</param>
         protected BasePage([NotNull] IWebDriver driver, [NotNull] Dictionary<string, string> data,
-            int timeout = DEFAULT_TIMEOUT)
+            int timeout = DefaultTimeout)
         {
             if (driver == null) throw new ArgumentNullException(nameof(driver));
             if (data == null) throw new ArgumentNullException(nameof(data));
@@ -111,7 +111,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
             try
             {
-                var folderName = WebDriverExtensions.Settings.TestResultsFolder ?? DEFAULT_TEST_RESULTS_FOLDER;
+                var folderName = WebDriverExtensions.Settings.TestResultsFolder ?? DefaultTestResultsFolder;
                 if (!Directory.Exists(folderName))
                     Directory.CreateDirectory(folderName);
                 TakeScreenshot().SaveAsFile($"{folderName}\\{fileName}", format);

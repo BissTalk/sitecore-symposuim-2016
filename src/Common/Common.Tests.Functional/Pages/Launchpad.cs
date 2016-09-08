@@ -63,7 +63,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
 
         [UsedImplicitly]
         public Launchpad([NotNull] IWebDriver driver)
-            : base(driver, new Dictionary<string, string>(), 3)
+            : base(driver, new Dictionary<string, string>(), DefaultTimeout)
         {
         }
 

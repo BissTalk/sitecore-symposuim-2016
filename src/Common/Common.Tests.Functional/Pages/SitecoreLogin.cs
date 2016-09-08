@@ -43,7 +43,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <param name="driver">The driver.</param>
         [UsedImplicitly]
         public SitecoreLogin([NotNull] IWebDriver driver)
-            : base(driver, new Dictionary<string, string>(), 3)
+            : base(driver, new Dictionary<string, string>(), DefaultTimeout)
         {
         }
 
