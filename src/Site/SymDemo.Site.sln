@@ -34,7 +34,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Unit", "Tests.Unit\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymDemo.Site.Tests.Functional", "Tests.Functional\SymDemo.Site.Tests.Functional.csproj", "{0BC185B6-1B74-4438-9669-1B7E1D203E52}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Install", "Install", "{DB09267E-7997-4622-8532-266CD64F28BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Install", ".Install", "{DB09267E-7997-4622-8532-266CD64F28BD}"
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SymDemo.Site.Setup", "Setup\SymDemo.Site.Setup.wixproj", "{C7B53724-B901-4CBE-BF9D-984CC3936DA0}"
 EndProject

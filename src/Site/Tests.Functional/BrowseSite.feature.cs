@@ -64,11 +64,11 @@ namespace SymDemo.Site.Tests.Functional
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "mytag"}, SourceLine=6)]
+                "smoke"}, SourceLine=6)]
         public virtual void AddTwoNumbers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", new string[] {
-                        "mytag"});
+                        "smoke"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
