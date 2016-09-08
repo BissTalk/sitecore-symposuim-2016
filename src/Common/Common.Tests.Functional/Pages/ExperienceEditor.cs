@@ -28,7 +28,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         /// <param name="driver">The driver.</param>
         /// <param name="data">The data.</param>
         /// <param name="timeout">The timeout.</param>
-        public ExperienceEditor([NotNull] IWebDriver driver, [NotNull] Dictionary<string, string> data, int timeout = 15)
+        public ExperienceEditor([NotNull] IWebDriver driver, [NotNull] Dictionary<string, string> data, int timeout = 3)
             : base(driver, data, timeout)
         {
         }
