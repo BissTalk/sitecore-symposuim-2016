@@ -57,15 +57,21 @@ namespace SymDemo.Site.Tests.Functional.Steps
             webDriver.Dispose();
             Context.SetWebDriver(null);
         }
-        
+
+        /// <summary>
+        /// When I go to the home page.
+        /// </summary>
         [When(@"I go to the home page"), UsedImplicitly]
         public void WhenIGoToTheHomePage()
         {
             Context.GoToPage<LandingPage>();
         }
-        
+
+        /// <summary>
+        /// The scroll should be on the screen.
+        /// </summary>
         [Then(@"I can see the scroll"), UsedImplicitly]
-        public void ThenTheResultShouldBeOnTheScreen()
+        public void ThenTheScrollShouldBeOnTheScreen()
         {
             Context.VerifyPage<LandingPage>()
                 .WaitFor(new TimeSpan(0, 0, 3))
