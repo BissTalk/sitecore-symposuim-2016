@@ -62,7 +62,8 @@ namespace SymDemo.Common.Tests.Functional.Pages
         [NotNull]
         public SitecoreLogin ClickLogInButton()
         {
-            _logIn.Click();
+
+            _logIn.Click(true);
             return this;
         }
 
