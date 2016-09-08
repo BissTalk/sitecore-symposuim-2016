@@ -41,6 +41,7 @@
 		<Feature Id="ProductFeature" Title="Setup" Level="1">
       <ComponentGroupRef Id="SymDemo.Site.Web.Content" />
       <ComponentGroupRef Id="SymDemo.Site.Web.Binaries" />
+      <ComponentGroupRef Id="SymDemo.Site.Models.Binaries" />
       
 		</Feature>
 	</Product>
