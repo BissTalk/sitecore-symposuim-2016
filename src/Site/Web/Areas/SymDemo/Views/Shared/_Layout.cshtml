@@ -1,9 +1,14 @@
 ﻿@using Glass.Mapper.Sc
 @{
     var cssClass = GlassHtml.IsInEditingMode ? "sc-page-edit" : null;
+    var lang = "en";
+    if (Sitecore.Context.Language != null)
+    {
+        lang = Sitecore.Context.Language.Name;
+    }
 }
 <!DOCTYPE html>
-<html lang="en">
+<html lang="@lang">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
