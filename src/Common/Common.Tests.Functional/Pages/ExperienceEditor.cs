@@ -48,7 +48,7 @@ namespace SymDemo.Common.Tests.Functional.Pages
         [NotNull]
         public override ExperienceEditor VerifyPageUrl()
         {
-            new WebDriverWait(WebDriver TimeSpan.FromMinutes(Timeout)).Until(d => d.Url.Contains("?sc_mode=edit"));
+            new WebDriverWait(WebDriver, TimeSpan.FromMinutes(Timeout)).Until(d => d.Url.Contains("?sc_mode=edit"));
             return this;
         }
 
