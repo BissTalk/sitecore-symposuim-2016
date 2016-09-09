@@ -19,7 +19,7 @@
         <meta name="description" content="@Model.Description" />
     }@if (!string.IsNullOrEmpty(Model.Robots))
     {
-        <meta name="robots" content="@Model.Robots" />
+        <meta name="robots" content="@Model.Robots.Replace(' ', ',')" />
     }@foreach (string tagName in Model.MetaTags)
     {
         <meta name="@tagName" content="@Model.MetaTags[tagName]" />
