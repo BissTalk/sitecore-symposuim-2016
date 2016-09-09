@@ -1,0 +1,43 @@
+{
+  "Id": "ActionTemplates-83",
+  "Name": "Windows Installer - Uninstall",
+  "Description": "The Windows Installer executable program that uninstall the products by product guid through Msiexec.exe.",
+  "ActionType": "Octopus.Script",
+  "Version": 1,
+  "Properties": {
+    "Octopus.Action.Script.ScriptBody": "function Invoke-Script($ProductGuid, $ProductName){\r\n  try{\r\n        if($ProductGuid -ne $null) {\r\n            $parameters = \"/x {$ProductGuid} /quiet /qn /norestart\" \r\n            Write-Output \"Uninstalling Begins $ProductName :  $ProductGuid\"\r\n            Write-Host $parameters\r\n            $process = $null\r\n            do{\t\r\n                Write-Host \"Execute msiexec.exe $$parameters\"\r\n                $process = Start-Process -FilePath \"msiexec.exe\" -ArgumentList \"$parameters\" -Wait -Passthru\r\n        \t\tif($process.ExitCode -eq 0 -Or $process.ExitCode -eq 1605){  \r\n        \t\t\tWrite-Host \"Product Name: $ProductName; Product Id: $ProductGuid - uninstallation successfull\"      \r\n        \t\t\tExit 0\r\n        \t\t}\r\n        \t\telseif($process.ExitCode -ne 1618){\r\n        \t\t\t$errorMessage = GetErrorMessage $process.ExitCode\r\n        \t\t\t$outputInfo =  \"installion unsucessful, $ProductName; Product Id: $ProductGuid returnvalue: $errorMessage\" \r\n        \t\t\tWrite-Output  $outputInfo \r\n                    break\r\n        \t\t}\r\n        \t\t    Write-Host \"Another Windows installer is in progress, application returnValue: \" + $uninstallInfo.ReturnValue + \" sleeping for 60 seconds\"    \r\n        \t\t    Start-Sleep -s 60\r\n        \t} while ($process.ExitCode -eq 1618)\r\n\t\t\t\r\n\t\t\tif ($process.ExitCode -gt 0) {\r\n\t\t\t\tWrite-Host GetErrorMessage $process.ExitCode\r\n\t\t\t\tEXIT $process.ExitCode\r\n\t\t\t}\t\t\t\r\n        }\r\n        else{\r\n            Write-Output \"Missing Product Guid for Uninstallation Process\"\r\n        }\r\n    }\r\n    catch {\r\n        Write-Host $Error\r\n        Write-Error \"Uninstallation Failed. Terminating.\"\r\n    }\r\n}\r\n\r\nInvoke-Script $ProductGuid $ProductName",
+    "Octopus.Action.Script.Syntax": "PowerShell",
+    "Octopus.Action.Script.ScriptSource": "Inline",
+    "Octopus.Action.RunOnServer": "false",
+    "Octopus.Action.Script.ScriptFileName": null,
+    "Octopus.Action.Package.FeedId": null,
+    "Octopus.Action.Package.PackageId": null
+  },
+  "Parameters": [
+    {
+      "Id": "f8184ecc-d5ce-4808-877a-dd20963697ee",
+      "Name": "ProductName",
+      "Label": "Product Name",
+      "HelpText": "Name of the Msi Product Name in the Product.wxs definition",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "e19f5674-9c94-452d-97bd-5597375e88b4",
+      "Name": "ProductGuid",
+      "Label": "Product Guid",
+      "HelpText": "Product Id or Product Code defined in the Product.wxs file definition.  Unique Identifier for Wix Installer.",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    }
+  ],
+  "$Meta": {
+    "ExportedAt": "2016-09-08T22:07:46.314Z",
+    "OctopusVersion": "3.4.3",
+    "Type": "ActionTemplate"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "Id": "ActionTemplates-81",
+  "Name": "Automated Test - SpecRunner By Categories",
+  "Description": "This step executes SpecRunner for automating functional tests by categories.",
+  "ActionType": "Octopus.Script",
+  "Version": 1,
+  "Properties": {
+    "Octopus.Action.Script.ScriptBody": "function Invoke-Script($basePath, $functionalTestName, $profile, $filters, $specRunnerExe, $expectedTestSuccessRate, $machineRole, $resultFolder)\r\n{\r\n\tWrite-Host (\"Determining which machine to run tests on...\")\r\n\t\r\n\ttry{\r\n\t\t$machine = Get-AvailableWorkerMachineFromPool $machineRole\r\n\t}\r\n\tcatch [System.Management.Automation.CommandNotFoundException]{\r\n\t\tthrow \"Get-AvailableWorkerMachineFromPool module is not loaded in this project. Please use Project->Process->\"\"Include script modules\"\" link to select Get-AvailableWorkerMachineFromPool module.\"\r\n\t}\r\n\t\r\n\t\r\n\tif(!$machine){\r\n\t\tWrite-Host (\"Machine $machine is not a designated runner machine for this release, exiting...\")\r\n\t\tExit 0\r\n\t}\r\n\t\r\n\tWrite-Host \"Starting Test Run...\"\r\n\t\r\n\t#Write-Host  $specRunnerExe + \" run $profile.srprofile /baseFolder:$basePath /filter:`\"$filters`\" /log:specrun.log\"\r\n\t$commandLine = \"$specRunnerExe run default.srprofile /baseFolder:$basePath /filter:`\"$filters`\"  /log:specrun.log\"\r\n\t\r\n\tWrite-Host $commandLine\r\n\tInvoke-Expression $commandLine | Tee-Object -Variable testResultsOutput | Out-Null\r\n\t\r\n\t$testResultsOutput = Get-Content -Path $basePath\\specrun.log\r\n\r\n\t If (!(Test-Path  $basePath\\$resultFolder -PathType Container))\r\n\t {\r\n\t\tNew-Item -ItemType directory -Path $basePath\\$resultFolder \r\n\t}\r\n\r\n\tCopy-Item \"$basePath\\*.html\" \"$basePath\\$resultFolder\"\r\n\t\"Copy files from $basePath\\$functionalTestName*.html to $basePath\\$resultFolder\"\r\n\t\"Results are copied to $basePath\\$resultFolder to be zipped up....\"\r\n\r\n\t$testResults = Get-ParseTestResults $testResultsOutput\r\n\tWrite-Host \"Parsed Test Result:  $testResults\"\r\n\tWrite-TestResults $testResults $expectedTestSuccessRate\r\n\tWrite-Host \"Process exited with code $LASTEXITCODE\"\r\n\tExit 0\r\n}\r\n###################################################################\r\n# Octopust Step Template Helper functions section\r\n###################################################################\r\n\r\nfunction Get-TestResultNumber($testResults, $resultCategory){\r\n\t$result = ($testResults | select-string ($resultCategory + \": \\d+\") -allmatches).matches\r\n\t$result = $result -split \":\"\r\n\tif(!$result){\r\n\t\treturn 0\r\n\t}\r\n\treturn $result[1].Trim()\r\n}\r\n\r\nfunction Get-ParseTestResults($testResultsOutput){\r\n\t$properties = @{\r\n\t\tSucceeded = Get-TestResultNumber $testResultsOutput \"Succeeded\" \r\n\t\tFailed = Get-TestResultNumber $testResultsOutput \"Failed\"\r\n\t\tSkipped = Get-TestResultNumber $testResultsOutput \"Skipped\"\r\n\t\tPending = Get-TestResultNumber $testResultsOutput \"Pending\"\r\n\t\tIgnored = Get-TestResultNumber $testResultsOutput \"Ignored\"\r\n\t\tTotal = Get-TestResultNumber $testResultsOutput \"Total\"    \r\n\t}\r\n\treturn New-Object PSObject -Property $properties\r\n}\r\nfunction Write-TestResults($testResults, $expectedTestSuccessRate = 100){\r\n\t\r\n\tif($testResults.Total -eq 0){\r\n\t\tWrite-Host \"No tests found to execute.\"\r\n\t\tExit 0\r\n\t}\r\n\t$recalTotal = [int]$testResults.Total - [int]$testResults.Ignored\r\n\t$testsPassRate = (($testResults.Succeeded / $recalTotal) * 100)\r\n\tWrite-Host (\"----------------------------------------\")\r\n\tWrite-Host (\"Total tests executed: \" + $recalTotal)\r\n\tWrite-Host (\"Tests passed: \" + $testResults.Succeeded)\r\n\tWrite-Host (\"Tests failed: \" + $testResults.Failed)\r\n\tWrite-Host (\"Tests skipped: \" + $testResults.Skipped)\r\n\tWrite-Host (\"Tests pending: \" + $testResults.Pending)\r\n\tWrite-Host (\"Tests ignored: \" + $testResults.Ignored)\r\n\tWrite-Host (\"Tests expected pass rate: $expectedTestSuccessRate%\")\r\n\tWrite-Host (\"Total Tests actual pass rate minus Ignore Counts: $testsPassRate %\")\r\n\tif($testsPassRate -ge $expectedTestSuccessRate)\r\n\t{\r\n\t\tWrite-Host \"Number of tests passed is equal or above expected rate.\"\r\n\t\tExit 0\r\n\t}\r\n\telse{\r\n\t\tWrite-Host \"Number of tests passed is below expected rate. Declaring as failed!\"\r\n\t\tExit 1 \r\n\t}\r\n}\r\n###################################################################\r\n# Setup parameters\r\n# NOTE: Uncomment below line to use the parameters\r\n###################################################################\r\n\r\n###################################################################\r\n# Tell Octopus to launch script\r\n# NOTE: Uncomment below line to execute within Octopus Deploy\r\n###################################################################\r\n\r\nInvoke-Script $basePath $functionalTestName $profile $filters $specRunPath $expectedTestSuccessRate $machineRole $resultFolder\r\n\r\n\r\n",
+    "Octopus.Action.Script.Syntax": "PowerShell",
+    "Octopus.Action.Script.ScriptSource": "Inline",
+    "Octopus.Action.RunOnServer": "false",
+    "Octopus.Action.Script.ScriptFileName": null,
+    "Octopus.Action.Package.FeedId": null,
+    "Octopus.Action.Package.PackageId": null
+  },
+  "Parameters": [
+    {
+      "Id": "12a48b69-c70e-4d21-b2ec-74c7b170a793",
+      "Name": "basePath",
+      "Label": "Base Path",
+      "HelpText": "The path of the root directory",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "c9e35b70-6309-41ab-b9e5-23c6c9cb5f86",
+      "Name": "functionalTestName",
+      "Label": "Functional Test Name",
+      "HelpText": "Name of the functional test",
+      "DefaultValue": "application.functional.tests",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "5dfdb688-0caf-4fd2-830c-96ab37ef4f87",
+      "Name": "profile",
+      "Label": "Profile",
+      "HelpText": "Profile for SpecRunner to run.",
+      "DefaultValue": "default",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "8dc91d4e-7448-4be9-ac71-53262e33e288",
+      "Name": "filters",
+      "Label": "Filters",
+      "HelpText": "Categories for the filtering to execute.  Example, can handle one more more (@smoke, @smoke & regression, @regression & @progression)",
+      "DefaultValue": "@smoke",
+      "DisplaySettings": {
+        "Octopus.ControlType": "Select",
+        "Octopus.SelectOptions": "@smoke|Smoke\n@regression|Regression\n@prod-smoke|Prod-Smoke\n@prod-regression|Prod-Regression"
+      }
+    },
+    {
+      "Id": "dc9f470d-374d-4b56-9ad7-afb54f607ca8",
+      "Name": "specRunPath",
+      "Label": "Spec Runner Path",
+      "HelpText": "Path to exe.",
+      "DefaultValue": "d:/Programs/SpecRunner/tools/SpecRun.exe",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "f3c52211-c761-42e8-bbe9-21046829c99d",
+      "Name": "expectedTestSuccessRate",
+      "Label": "Expected Test Success Rate",
+      "HelpText": "Provide a minimum percentage number 0-100 in order for the tests to pass. By default, all test must pass, 100%.",
+      "DefaultValue": "100",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "213f36c7-4e46-403a-92e0-f126b6fc341f",
+      "Name": "machineRole",
+      "Label": "Machine Role",
+      "HelpText": "Provide a name of a single machine role as used in machine and environment configurations.",
+      "DefaultValue": "AutomatedTestRunnerServer",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "785e72bc-73aa-4cfa-b081-990c2f2a35dd",
+      "Name": "resultFolder",
+      "Label": "Result Folder",
+      "HelpText": "Html and screenshots where it resides.",
+      "DefaultValue": "Results",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    }
+  ],
+  "$Meta": {
+    "ExportedAt": "2016-09-08T22:15:05.948Z",
+    "OctopusVersion": "3.4.3",
+    "Type": "ActionTemplate"
+  }
+}

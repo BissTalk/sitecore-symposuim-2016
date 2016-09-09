@@ -1,0 +1,83 @@
+{
+  "Id": "ActionTemplates-82",
+  "Name": "Windows Installer - Install",
+  "Description": "The Windows Installer executable program that interprets packages and installs products is Msiexec.exe.",
+  "ActionType": "Octopus.Script",
+  "Version": 5,
+  "Properties": {
+    "Octopus.Action.Script.ScriptBody": "function Invoke-Script($SiteArguments, $OtherMsiParameters, $InstanceId, $MsiTransformName, $PatchCatalog, $InstallFolder, $TargetDir){\r\n    try{\r\n            if ($InstanceId) {$SiteArguments+= AddNewInstance $InstanceId}\r\n            if ($OtherMsiParameters) {$SiteArguments+=AppendParameters $OtherMsiParameters}\r\n \r\n            Write-Output \"Validating catalog $PatchCatalog\"\r\n            \r\n            $status = $false\r\n            if($PatchCatalog -ne $null -and $PatchCatalog -ne '') {\r\n                $status = ValidateCatalog $PatchCatalog $InstallFolder\r\n                \r\n                $SiteArguments+=\"TARGETDIR=`\"$TargetDir`\"\"\r\n                \r\n                if  ($status -eq $false) {\r\n                    Write-Host \"Failed Validation\"\r\n                    return exit 1\r\n                }\r\n            }\r\n    \r\n            Write-Host \"Pass Validation...\"\r\n            InstallApplication $SiteArguments\r\n        }\r\n    catch [System.Management.Automation.CommandNotFoundException]{\r\n            throw \"'MSI Install Methods' module is not loaded in this project. Please use Project->Process->\"\"Include script modules\"\" link to select 'MSI Install Methods' module.\"\r\n        }\r\n \r\n}\r\n#Default Value\r\n$SiteArguments = @(\r\n            \"/i\"\r\n            \"`\"$MsiPath`\"\"    \r\n\t        \"/quiet\"\r\n\t        \"/qn\"\r\n\t        \"/norestart\"    \r\n            \"INSTALLFOLDER=`\"$InstallFolder`\"\"\r\n        )\r\n        \r\nInvoke-Script $SiteArguments $OtherMsiParameters $InstanceId $MsiTransformName $PatchCatalog $InstallFolder $TargetDir\r\n",
+    "Octopus.Action.Script.Syntax": "PowerShell",
+    "Octopus.Action.Script.ScriptSource": "Inline",
+    "Octopus.Action.RunOnServer": "false",
+    "Octopus.Action.Script.ScriptFileName": null,
+    "Octopus.Action.Package.FeedId": null,
+    "Octopus.Action.Package.PackageId": null
+  },
+  "Parameters": [
+    {
+      "Id": "b1ce7894-2c50-4b64-9598-e5f053624689",
+      "Name": "MsiPath",
+      "Label": "Path to the MSI file",
+      "HelpText": "Msi Path example \"d:\\..\\..\\app.msi\"",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "3cbbc7bd-72ce-4347-b983-80dc17c7137d",
+      "Name": "InstanceId",
+      "Label": "InstanceId",
+      "HelpText": "Pass the InstanceId from the Product.wxs for a new Msi instance to be installed example \"I2\" or \"I3\".  When the InstanceId is not defined and left blank, the process in the template will take this as a base installer.",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "8d589870-d56d-4a2e-bd57-8c7c32f9cdc2",
+      "Name": "OtherMsiParameters",
+      "Label": "Additional Msi Parameters",
+      "HelpText": "If you have additional Msi Parameters to be added to the Msi installation process, it will take this array and append this into existing arguments to be used example \"ISCMS=1\" or \"COVEO=#{....}\"",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "MultiLineText"
+      }
+    },
+    {
+      "Id": "6ea41520-048a-4c37-8111-6859f744dd5a",
+      "Name": "InstallFolder",
+      "Label": "Installation Folder",
+      "HelpText": "Installation Folder example \"d:\\ebiz\\websites\\appfolder\"",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "52ade3f2-4dda-43b3-a81d-6000b1e86225",
+      "Name": "TargetDir",
+      "Label": "Target Directory",
+      "HelpText": "This is normally target to \"D:\\\"",
+      "DefaultValue": "D:\\",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "1d9a5e93-ab2e-4404-a90c-bed980b69bb8",
+      "Name": "PatchCatalog",
+      "Label": "Path to catalog file",
+      "HelpText": "Path to the Patch Catalog txt file",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    }
+  ],
+  "$Meta": {
+    "ExportedAt": "2016-09-08T22:09:55.872Z",
+    "OctopusVersion": "3.4.3",
+    "Type": "ActionTemplate"
+  }
+}

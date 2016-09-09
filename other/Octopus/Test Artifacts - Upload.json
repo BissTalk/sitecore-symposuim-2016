@@ -1,0 +1,53 @@
+{
+  "Id": "ActionTemplates-87",
+  "Name": "Test Artifacts - Upload",
+  "Description": "Functionality to upload test artifacts to Octopus",
+  "ActionType": "Octopus.Script",
+  "Version": 0,
+  "Properties": {
+    "Octopus.Action.Script.ScriptBody": "function New-OctopusArtifactEx($RootPath) {\r\n    \r\n    if (Test-Path -Path \"$RootPath\"){\r\n        $files = get-childitem -recurse -Path \"$RootPath\" | where {!$_.PsIsContainer} # | % { $_.FullName }\r\n        foreach ($file in $files) {\r\n            New-OctopusArtifact -Path $file.FullName \r\n            Write-Host Adding Artifact: $file.FullName \r\n        }\r\n    }\r\n}\r\n\r\n$testResultPath = $OctopusParameters['TestDirectory']+\"\\\"+$OctopusParameters['TestResultFolder']\r\nWrite-Host \"Directory file files to upload: $testResultPath\"\r\nWrite-Host \"Upload Artifacts Starting....\"\r\nNew-OctopusArtifactEx $testResultPath\r\nWrite-Host \"Upload Artifacts Completed....\"",
+    "Octopus.Action.Script.Syntax": "PowerShell",
+    "Octopus.Action.Script.ScriptSource": "Inline",
+    "Octopus.Action.RunOnServer": "false",
+    "Octopus.Action.Script.ScriptFileName": null,
+    "Octopus.Action.Package.FeedId": null,
+    "Octopus.Action.Package.PackageId": null
+  },
+  "Parameters": [
+    {
+      "Id": "e30309f0-9b9b-4a15-bab7-194788b7efa6",
+      "Name": "TestDirectory",
+      "Label": "Test Directory",
+      "HelpText": "A directory where test results reside.",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "aab34b8a-7153-40c0-8400-016594cdeb60",
+      "Name": "TestResultFolder",
+      "Label": "Test Result Folder",
+      "HelpText": "Folder Name of the where the test results artifacts resides.",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "9e382ba1-a1f6-4993-aea7-f65929c35940",
+      "Name": "MachineRole",
+      "Label": "Machine Role",
+      "HelpText": "Provide a name of a single machine role as used in machine and environment configurations.",
+      "DefaultValue": "AutomatedTestRunnerServer",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    }
+  ],
+  "$Meta": {
+    "ExportedAt": "2016-09-08T22:29:20.301Z",
+    "OctopusVersion": "3.4.3",
+    "Type": "ActionTemplate"
+  }
+}

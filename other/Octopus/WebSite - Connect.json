@@ -1,0 +1,53 @@
+{
+  "Id": "ActionTemplates-47",
+  "Name": "Website - Connect",
+  "Description": "Connects to a website with provided URL and outputs results of the connection including time taken.",
+  "ActionType": "Octopus.Script",
+  "Version": 3,
+  "Properties": {
+    "Octopus.Action.Script.ScriptBody": "\r\n###################################################################\r\n# Invokes a webstie based on provided URL\r\n# \r\n###################################################################\r\n\r\n\r\n###################################################################\r\n# This is the main script to be executed which may use additional\r\n# \r\n###################################################################\r\nfunction Invoke-Script($url, $numberOfRetries=5, $secondsToWaitBetweenRetries=10){\r\n    $currentTry=[int]1;\r\n    Do{\r\n        Write-Output \"Trying to connect to site $url. Attempt $currentTry of $numberOfRetries.\"\r\n        $request = $null \r\n        $exception = $null\r\n        $time = try \r\n        { \r\n            $result = Measure-Command { \r\n                $request = [system.Net.WebRequest]::Create($url)\r\n                $response = $request.GetResponse()\r\n            } \r\n            $result.TotalMilliseconds \r\n        } \r\n        catch \r\n        { \r\n            ## If the request generated an exception (i.e.: 500 server \r\n            ## error or 404 not found), we can pull the status code from the \r\n            ## Exception.Response property \r\n            $response = $_.Exception.Response \r\n            if($response -eq $null){\r\n                $exception = $_.Exception\r\n            }\r\n            $time = -1 \r\n        } \r\n\r\n         if($exception -ne $null){\r\n            $responseDescripion = $exception\r\n         }\r\n         else{\r\n            $responseDescripion = $response.StatusDescription\r\n         }\r\n         \r\n         $result = [PSCustomObject] @{ \r\n            Time = Get-Date; \r\n            Uri = $url; \r\n            StatusCode = $response.StatusCode; \r\n            StatusDescription = $responseDescripion; \r\n            ResponseLength = $response.ContentLength; \r\n            TimeTaken = $time; \r\n        } \r\n\r\n        \r\n        $currentTry = $currentTry + 1\r\n        $keepRetrying = ($result.StatusCode -ne \"OK\") -and ($currentTry -le $numberOfRetries);\r\n        if($keepRetrying){\r\n            Start-Sleep $secondsToWaitBetweenRetries\r\n        }\r\n    }While($keepRetrying)\r\n\r\n    Write-Output $result\r\n    if($result.StatusCode -ne \"OK\"){\r\n        Write-Output \"Failed\"\r\n        Exit 1  \r\n    }\r\n    Exit 0\r\n}\r\n\r\n\r\n###################################################################\r\n# Tell Octopus to launch script\r\n# \r\n###################################################################\r\n\r\nInvoke-Script $url $numberOfRetries $secondsToWaitBetweenRetries",
+    "Octopus.Action.Script.Syntax": "PowerShell",
+    "Octopus.Action.Script.ScriptSource": "Inline",
+    "Octopus.Action.RunOnServer": "false",
+    "Octopus.Action.Script.ScriptFileName": null,
+    "Octopus.Action.Package.FeedId": null,
+    "Octopus.Action.Package.PackageId": null
+  },
+  "Parameters": [
+    {
+      "Id": "be39d3df-0618-4524-9c01-009652c92514",
+      "Name": "$url",
+      "Label": "URL of a website",
+      "HelpText": "Provide a URL for the website to connect to",
+      "DefaultValue": null,
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "8589f66e-1549-4a5f-8987-c8751beb76ae",
+      "Name": "$numberOfRetries",
+      "Label": "Number of times to try to connect to the website",
+      "HelpText": null,
+      "DefaultValue": "5",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    },
+    {
+      "Id": "9e5ac279-0614-450d-be2d-8e3303e01245",
+      "Name": "$secondsToWaitBetweenRetries",
+      "Label": "Number of seconds to wait between retries",
+      "HelpText": null,
+      "DefaultValue": "10",
+      "DisplaySettings": {
+        "Octopus.ControlType": "SingleLineText"
+      }
+    }
+  ],
+  "$Meta": {
+    "ExportedAt": "2016-09-08T22:13:34.203Z",
+    "OctopusVersion": "3.4.3",
+    "Type": "ActionTemplate"
+  }
+}
