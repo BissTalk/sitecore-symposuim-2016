@@ -6,7 +6,7 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>2f3e7587-1e8d-4611-918a-2a5c2f3ffa3c</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>SymDemo.Common</OutputName>
+    <OutputName>SymDemo.Common.Setup</OutputName>
     <OutputType>Package</OutputType>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
@@ -90,6 +90,6 @@
     <Message Text="@(Compile)&#xD;&#xA;" />
   </Target>
   <Target Name="AfterBuild">
-    <Exec Command="&quot;$(ProjectDir)QueryMSIPackageContents.exe&quot; &quot;$(ProjectDir)$(OutDir)$(ProjectName).msi&quot; &quot;webdir&quot; &quot;patch-catalog.txt&quot;" />
+    <Exec Command="&quot;$(ProjectDir)QueryMSIPackageContents.exe&quot; &quot;$(ProjectDir)$(OutDir)$(OutputName).msi&quot; &quot;webdir&quot; &quot;patch-catalog.txt&quot;" />
   </Target>
 </Project>

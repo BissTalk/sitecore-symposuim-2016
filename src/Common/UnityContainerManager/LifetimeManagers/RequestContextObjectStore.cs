@@ -16,7 +16,7 @@ namespace SymDemo.UnityContainerManager.LifetimeManagers
         /// <summary>
         ///     The key for the item collection of the <see cref="HttpContext" />.
         /// </summary>
-        private const string KEY = "Comcast.Mars.DependencyInjection.Unity.LifetimeManagers.RequestContextObjectStore";
+        private const string KEY = "DependencyInjection.Unity.LifetimeManagers.RequestContextObjectStore";
 
         /// <summary>
         ///     Prevents a default instance of the <see cref="RequestContextObjectStore" /> class from being created.
